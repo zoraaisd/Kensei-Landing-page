@@ -2,16 +2,20 @@ import { motion } from "framer-motion";
 import { Mail, Instagram, Linkedin } from "lucide-react";
 
 import kenseiLogo from "@/assets/Kensei-logo.png";
-import snookerLogo from "@/assets/snooker-logo.png";
-import gameLogo from "@/assets/ps logo.png";
-import dipLogo from "@/assets/Dip & Dash.png";
-import optimusLogo from "@/assets/optimus-logo.png";
+import snookerLogo from "@/assets/snookers-logo.png";
+import gameLogo from "@/assets/Gow-logo.png";
+import dipLogo from "@/assets/DipDash-logo.png";
+import optimusLogo from "@/assets/opt-logo.png";
 import founderImg from "@/assets/Founder.jpg";
 import coFounderImg from "@/assets/Co-Founder.jpg";
+import Navbar from "@/components/Navbar";
+import FooterSection from "@/components/FooterSection";
 
 const AboutPage = () => {
   return (
     <div className="bg-black text-white overflow-hidden">
+
+      <Navbar />
 
       {/* ================= HERO SECTION ================= */}
       <section className="relative py-32 bg-gradient-to-b from-black via-blue-950 to-black text-center">
@@ -215,7 +219,7 @@ const AboutPage = () => {
   <div className="container mx-auto px-6 text-center max-w-6xl">
 
     <h2 className="text-4xl font-bold mb-20 text-yellow-400">
-      Our Sub Brands
+      Our Brands
     </h2>
 
     <div className="grid md:grid-cols-4 gap-16 items-center">
@@ -228,7 +232,7 @@ const AboutPage = () => {
           alt="Snookers"
         />
         <p className="text-gray-400 text-sm">
-          Elite Snooker Experience
+          Elite 147 Snooker
         </p>
       </div>
 
@@ -240,7 +244,7 @@ const AboutPage = () => {
           alt="Game Of War"
         />
         <p className="text-gray-400 text-sm">
-          Next-Gen Gaming Arena
+          Game Of War
         </p>
       </div>
 
@@ -252,7 +256,7 @@ const AboutPage = () => {
           alt="Dip & Dash"
         />
         <p className="text-gray-400 text-sm">
-          Premium Street Dining
+          Dip&Dash
         </p>
       </div>
 
@@ -264,7 +268,7 @@ const AboutPage = () => {
           alt="Optimus Overseas"
         />
         <p className="text-gray-400 text-sm">
-          Global Academic Pathways
+          Optimus Global
         </p>
       </div>
 
@@ -272,6 +276,8 @@ const AboutPage = () => {
 
   </div>
 </section>
+
+<FooterSection />
 
     </div>
   );
