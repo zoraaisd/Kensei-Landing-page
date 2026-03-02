@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import snookerLogo from "@/assets/snookers-logo.png";
+import snookerLogo from "@/assets/snookers-logo.webp";
 
 const SnookerExperienceSection = () => {
   return (
@@ -89,7 +89,7 @@ const SnookerExperienceSection = () => {
 
             {/* CTA */}
             <motion.a
-              href="#booking"
+              href="https://147-snooker.netlify.app/"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="inline-block px-12 py-4 rounded-xl font-semibold

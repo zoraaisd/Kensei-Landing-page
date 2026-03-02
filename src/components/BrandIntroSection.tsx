@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import kenseiLogo from "@/assets/Kensie-logo.png";
+import kenseiLogo from "@/assets/Kensie-logo.webp";
 
 const BrandIntroSection = () => {
   return (

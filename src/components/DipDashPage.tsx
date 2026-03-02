@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import dipdashLogo from "@/assets/DipDash-logo.png";
+import dipdashLogo from "@/assets/DipDash-logo.webp";
 
 const DipDashPage = () => {
   return (
@@ -97,7 +97,7 @@ const DipDashPage = () => {
 
             {/* CTA */}
             <motion.a
-              href="#order"
+              href="https://dipndash.netlify.app/"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="inline-block px-12 py-4 rounded-xl font-semibold

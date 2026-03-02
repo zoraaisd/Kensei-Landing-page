@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { useNavigate, useLocation } from "react-router-dom";
-import kenseiLogo from "@/assets/Kensei-logo.png";
+import kenseiLogo from "@/assets/Kensei-logo.webp";
 
 const navLinks = [
   { label: "Home", href: "#home" },
@@ -126,7 +126,7 @@ const Navbar = () => {
 
           {/* BOOK A SLOT BUTTON */}
           <motion.a
-            href=""
+            href="https://147-snooker.netlify.app/booking"
             whileHover={{ scale: 1.08 }}
             whileTap={{ scale: 0.95 }}
             className="ml-4 px-5 py-2 rounded-lg text-sm font-semibold

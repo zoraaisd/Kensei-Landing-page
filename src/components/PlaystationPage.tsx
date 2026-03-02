@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Gamepad2, MonitorPlay, Zap } from "lucide-react";
-import gameLogo from "@/assets/Gow-logo.png";
+import gameLogo from "@/assets/Gow-logo.webp";
 
 const PlaystationPage = () => {
   return (
@@ -104,7 +104,7 @@ const PlaystationPage = () => {
 
             {/* CTA */}
             <motion.a
-              href="#booking"
+              href="https://147-snooker.netlify.app/"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="inline-block px-12 py-4 rounded-xl font-semibold

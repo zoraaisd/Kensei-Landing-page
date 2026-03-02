@@ -1,13 +1,13 @@
 import { motion } from "framer-motion";
 import { Mail, Instagram, Linkedin } from "lucide-react";
 
-import kenseiLogo from "@/assets/Kensei-logo.png";
-import snookerLogo from "@/assets/snookers-logo.png";
-import gameLogo from "@/assets/Gow-logo.png";
-import dipLogo from "@/assets/DipDash-logo.png";
-import optimusLogo from "@/assets/opt-logo.png";
-import founderImg from "@/assets/Founder.jpg";
-import coFounderImg from "@/assets/Co-Founder.jpg";
+import kenseiLogo from "@/assets/Kensei-logo.webp";
+import snookerLogo from "@/assets/snookers-logo.webp";
+import gameLogo from "@/assets/Gow-logo.webp";
+import dipLogo from "@/assets/DipDash-logo.webp";
+import optimusLogo from "@/assets/opt-logo.webp";
+import founderImg from "@/assets/Founder.webp";
+import coFounderImg from "@/assets/Co-Founder.webp";
 import Navbar from "@/components/Navbar";
 import FooterSection from "@/components/FooterSection";
 

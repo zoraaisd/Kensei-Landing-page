@@ -1,11 +1,11 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 
-import slide1 from "@/assets/snookers1.jpeg";
-import slide2 from "@/assets/snookers2.jpeg";
-import slide3 from "@/assets/snookers3.jpeg";
-import slide4 from "@/assets/snookers4.jpeg";
-import slide5 from "@/assets/snookers5.jpeg";
+import slide1 from "@/assets/snookerss1.1.webp";
+import slide2 from "@/assets/snookers2.webp";
+import slide3 from "@/assets/snookers3.webp";
+import slide4 from "@/assets/snookers4.webp";
+import slide5 from "@/assets/snookerss7.webp";
 
 const slides = [slide1, slide2, slide3, slide4, slide5];
 
@@ -114,7 +114,7 @@ const SnookersPage = () => {
             className="flex gap-4"
           >
             <a
-              href="#booking"
+              href="https://147-snooker.netlify.app/"
               className="px-8 py-4 rounded-xl font-semibold
                          bg-gradient-to-r from-emerald-600 to-green-500
                          text-white
@@ -125,7 +125,7 @@ const SnookersPage = () => {
             </a>
 
             <a
-              href="#pricing"
+              href="https://147-snooker.netlify.app/"
               className="px-8 py-4 rounded-xl font-semibold
                          border border-emerald-400
                          text-emerald-300

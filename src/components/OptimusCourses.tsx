@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import optimusLogo from "@/assets/opt-logo.png";
+import optimusLogo from "@/assets/opt-logo.webp";
 
 const courses = [
   "MSc in Environmental Data Analytics",

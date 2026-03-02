@@ -1,11 +1,10 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
-import optimusLogo from "@/assets/optimus-logo.png";
 
 /* ===== ADD 3 CAMPUS / EDUCATION IMAGES HERE ===== */
-import slide1 from "@/assets/optimus1.png";
-import slide2 from "@/assets/optimus2.png";
-import slide3 from "@/assets/optimus3.png";
+import slide1 from "@/assets/optimus1.webp";
+import slide2 from "@/assets/optimus2.webp";
+import slide3 from "@/assets/optimus3.webp";
 
 const slides = [slide1, slide2, slide3];
 

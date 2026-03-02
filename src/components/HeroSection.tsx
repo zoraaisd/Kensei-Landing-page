@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-import snooker from "@/assets/snookers6.jpeg";
-import game from "@/assets/ps4.png";
-import dip from "@/assets/dip5.png";
-import optimus from "@/assets/optimus3.png";
+import snooker from "@/assets/snookers6.webp";
+import game from "@/assets/ps4.webp";
+import dip from "@/assets/dip5.webp";
+import optimus from "@/assets/optimus3.webp";
 
 const slides = [
   {

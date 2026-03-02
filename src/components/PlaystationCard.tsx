@@ -5,11 +5,11 @@ import { useState, useEffect } from "react";
    🔥 ADD YOUR 5 IMAGES HERE
    ========================= */
 
-import slide1 from "@/assets/ps1.png";
-import slide2 from "@/assets/ps2.png";
-import slide3 from "@/assets/ps3.png";
-import slide4 from "@/assets/ps4.png";
-import slide5 from "@/assets/ps5.png";
+import slide1 from "@/assets/ps1.webp";
+import slide2 from "@/assets/ps2.webp";
+import slide3 from "@/assets/ps3.webp";
+import slide4 from "@/assets/ps4.webp";
+import slide5 from "@/assets/ps5.webp";
 
 const slides = [slide1, slide2, slide3, slide4, slide5];
 
@@ -111,7 +111,7 @@ const PlaystationCard = () => {
             className="flex gap-4"
           >
             <a
-              href="#booking"
+              href="https://147-snooker.netlify.app/"
               className="px-8 py-4 rounded-xl font-semibold
                          bg-gradient-to-r from-red-600 to-red-500
                          text-white
@@ -122,7 +122,7 @@ const PlaystationCard = () => {
             </a>
 
             <a
-              href="#consoles"
+              href="https://147-snooker.netlify.app/"
               className="px-8 py-4 rounded-xl font-semibold
                          border border-red-400
                          text-red-300

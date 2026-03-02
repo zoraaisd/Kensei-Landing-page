@@ -1,11 +1,10 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
-import dipdashLogo from "@/assets/Dip & Dash.png";
 
 /* ===== ADD YOUR 3 IMAGES HERE ===== */
-import slide1 from "@/assets/dip1.png";
-import slide2 from "@/assets/dip2.png";
-import slide3 from "@/assets/dip3.png";
+import slide1 from "@/assets/dip1.webp";
+import slide2 from "@/assets/dip2.webp";
+import slide3 from "@/assets/dip3.webp";
 
 const slides = [slide1, slide2, slide3];
 
@@ -96,7 +95,7 @@ const DipDashCard = () => {
           <div className="flex flex-wrap gap-4">
 
             <motion.a
-              href="#menu"
+              href="https://dipndash.netlify.app/"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="px-8 py-4 rounded-full font-semibold
@@ -109,7 +108,7 @@ const DipDashCard = () => {
             </motion.a>
 
             <motion.a
-              href="#offers"
+              href="https://dipndash.netlify.app/"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="px-8 py-4 rounded-full font-semibold
