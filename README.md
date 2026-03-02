@@ -1,73 +1,101 @@
-# Welcome to your Lovable project
+# 🏆 Kensei Groups — Elite Experiences Platform
 
-## Project info
+A premium multi-venture digital platform representing **Kensei Groups**, a lifestyle ecosystem redefining excellence across:
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+- 🎱 147 Snookers
+- 🎮 Game Of War (PlayStation Arena)
+- 🍔 Dip & Dash
+- 🎓 Optimus Overseas Education
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## 🌐 Live Website
 
-**Use Lovable**
+🔗 https://www.kenseifnbgroup.com  
+🔗 https://www.kenseifnbgroup.com/about  
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## 🚀 Project Overview
 
-**Use your preferred IDE**
+Kensei Groups is a modern luxury brand ecosystem website built with performance, design precision, and immersive user experience in mind.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+This platform showcases multiple ventures under a unified premium brand identity.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+---
 
-Follow these steps:
+## 🛠 Tech Stack
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+- ⚛️ React + TypeScript
+- ⚡ Vite
+- 🎨 Tailwind CSS
+- 🎥 Framer Motion (Animations)
+- 🎯 Lucide React Icons
+- 🌍 Deployed via GitHub
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+---
 
-# Step 3: Install the necessary dependencies.
-npm i
+## 🎨 Design Philosophy
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+- Minimal but bold
+- Cinematic gradients
+- Brand-specific color identity
+- Smooth motion transitions
+- Full viewport structured sections
+- High-end visual hierarchy
 
-**Edit a file directly in GitHub**
+---
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 📂 Project Structure
 
-**Use GitHub Codespaces**
+src/
+│
+├── components/
+│ ├── Navbar
+│ ├── Footer
+│ ├── SnookerSection
+│ ├── PlaystationSection
+│ ├── DipDashSection
+│ ├── OptimusSection
+│ └── BrandIntro
+│
+├── pages/
+│ ├── Home
+│ ├── About
+│
+├── assets/
+│ ├── Logos
+│ ├── Founder Images
+│
+└── main.tsx
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
 
-## What technologies are used for this project?
+---
 
-This project is built with:
+## 🧩 Core Sections
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+### 🎱 147 Snookers
+Elite championship-grade snooker lounge experience.
 
-## How can I deploy this project?
+### 🎮 Game Of War
+Next-gen PlayStation arena featuring PS2, PS4 & PS5 experiences.
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+### 🍔 Dip & Dash
+Premium fast-casual street food concept with bold identity.
 
-## Can I connect a custom domain to my Lovable project?
+### 🎓 Optimus Overseas
+Global academic consultancy for postgraduate pathways.
 
-Yes, you can!
+---
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## 👥 Founders
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+### Founder & Director Manager
+Strategic Operations & Brand Ecosystem Lead.
+
+### Co-Founder & CEO
+Innovation, Expansion & Growth Architect.
+
+(Images and contact details managed in About Page)
+
+---
