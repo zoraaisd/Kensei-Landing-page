@@ -32,16 +32,16 @@ const PlaystationCard = () => {
     >
 
       {/* Top Left Small Brand Label */}
-<div className="absolute top-6 left-6 z-20">
-  <div className="px-6 py-3 pt-2 rounded-full
+      <div className="absolute top-6 left-6 z-20">
+        <div className="px-6 py-3 pt-2 rounded-full
                 bg-red-900/40 backdrop-blur-md
                 border border-red-500/40
                 shadow-[0_0_20px_rgba(239,68,68,0.35)]">
-  <span className="text-red-300 text-sm tracking-widest font-semibold">
-    Game Of War
-  </span>
-</div>
-</div>
+          <span className="text-red-300 text-sm tracking-widest font-semibold">
+            Game Of War
+          </span>
+        </div>
+      </div>
       {/* ================= SLIDES ================= */}
       <AnimatePresence mode="wait">
         <motion.img
@@ -112,6 +112,8 @@ const PlaystationCard = () => {
           >
             <a
               href="https://147-snooker.netlify.app/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-8 py-4 rounded-xl font-semibold
                          bg-gradient-to-r from-red-600 to-red-500
                          text-white
@@ -123,6 +125,8 @@ const PlaystationCard = () => {
 
             <a
               href="https://147-snooker.netlify.app/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-8 py-4 rounded-xl font-semibold
                          border border-red-400
                          text-red-300
@@ -151,11 +155,10 @@ const PlaystationCard = () => {
         {slides.map((_, i) => (
           <div
             key={i}
-            className={`h-2 rounded-full transition-all duration-500 ${
-              i === index
+            className={`h-2 rounded-full transition-all duration-500 ${i === index
                 ? "w-8 bg-red-500 shadow-[0_0_10px_rgba(220,38,38,0.8)]"
                 : "w-2 bg-gray-500"
-            }`}
+              }`}
           />
         ))}
       </div>

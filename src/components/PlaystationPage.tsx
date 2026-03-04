@@ -18,27 +18,27 @@ const PlaystationPage = () => {
 
           {/* ================= LEFT 40% ================= */}
           {/* ================= LEFT ================= */}
-<div className="md:col-span-5 flex flex-col justify-center items-center relative">
+          <div className="md:col-span-5 flex flex-col justify-center items-center relative">
 
-  {/* Glow */}
-  <div className="absolute w-[480px] h-[480px] bg-red-600/20 blur-3xl rounded-full" />
+            {/* Glow */}
+            <div className="absolute w-[480px] h-[480px] bg-red-600/20 blur-3xl rounded-full" />
 
-  <motion.img
-    src={gameLogo}
-    alt="Game Of War"
-    className="relative w-80 md:w-[420px] object-contain
+            <motion.img
+              src={gameLogo}
+              alt="Game Of War"
+              className="relative w-80 md:w-[420px] object-contain
                drop-shadow-[0_0_80px_rgba(255,0,0,0.6)]"
-    initial={{ opacity: 0, x: -60 }}
-    whileInView={{ opacity: 1, x: 0 }}
-    transition={{ duration: 1 }}
-    viewport={{ once: true }}
-  />
+              initial={{ opacity: 0, x: -60 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1 }}
+              viewport={{ once: true }}
+            />
 
-  <p className="mt-8 text-red-400 tracking-widest uppercase text-xs">
-    Next-Gen Console Arena
-  </p>
+            <p className="mt-8 text-red-400 tracking-widest uppercase text-xs">
+              Next-Gen Console Arena
+            </p>
 
-</div>
+          </div>
 
           {/* ================= RIGHT 60% ================= */}
           <div className="md:col-span-7 text-left">
@@ -105,6 +105,8 @@ const PlaystationPage = () => {
             {/* CTA */}
             <motion.a
               href="https://147-snooker.netlify.app/"
+              target="_blank"
+              rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="inline-block px-12 py-4 rounded-xl font-semibold

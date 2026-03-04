@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
-import { Instagram, Facebook, Twitter, Youtube, Mail, Phone, MapPin } from "lucide-react";
+import { Instagram, Facebook, XIcon, Youtube, Mail, Phone, MapPin } from "lucide-react";
 
 const socials = [
   { icon: Instagram, href: "https://www.instagram.com/kenseigroups/?hl=en" },
-  { icon: Facebook, href: "#" },
-  { icon: Twitter, href: "#" },
+  { icon: Facebook, href: "https://www.facebook.com/profile.php?id=61588258664284" },
+  { icon: XIcon, href: "https://x.com/Kenseigroups" },
   { icon: Youtube, href: "https://www.youtube.com/@KenseiGroups" },
 ];
 
@@ -46,7 +46,7 @@ const FooterSection = () => (
 
             <div className="flex items-center gap-2">
               <Phone size={14} className="text-yellow-600" />
-              <span>+91 98765 43210</span>
+              <span>+91 8 124 123 000</span>
             </div>
 
             <div className="flex items-center gap-2">
@@ -62,6 +62,8 @@ const FooterSection = () => (
               <a
                 key={i}
                 href={href}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center text-gray-600 hover:bg-yellow-500 hover:text-white transition-all duration-300"
               >
                 <Icon size={14} />

@@ -97,7 +97,9 @@ const DipDashPage = () => {
 
             {/* CTA */}
             <motion.a
-              href="https://dipndash.netlify.app/"
+              href="https://www.dipanddash.com/"
+              target="_blank"
+              rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="inline-block px-12 py-4 rounded-xl font-semibold

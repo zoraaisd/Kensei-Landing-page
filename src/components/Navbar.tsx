@@ -92,41 +92,42 @@ const Navbar = () => {
 
         {/* LOGO */}
         <button onClick={() => handleScrollTo("#home")}>
-  <img
-    src={kenseiLogo}
-    alt="Kensei"
-    className="w-24"
-  />
-</button>
+          <img
+            src={kenseiLogo}
+            alt="Kensei"
+            className="w-24"
+          />
+        </button>
 
         {/* DESKTOP NAV */}
         <div className="hidden md:flex items-center gap-6">
 
           <ul className="flex items-center gap-6">
-  {navLinks.map((link) => (
-    <li key={link.label}>
-      <button
-        onClick={() => handleScrollTo(link.href)}
-        className={`
+            {navLinks.map((link) => (
+              <li key={link.label}>
+                <button
+                  onClick={() => handleScrollTo(link.href)}
+                  className={`
           relative text-sm font-semibold tracking-wide px-4 py-2 rounded-md
           transition-all duration-300
 
-          ${
-            active === link.href
-              ? "bg-gradient-to-r from-yellow-400 to-yellow-600 text-white shadow-md"
-              : "text-blue-800 hover:text-yellow-600 hover:-translate-y-1 hover:drop-shadow-[0_0_6px_rgba(255,215,0,0.6)]"
-          }
+          ${active === link.href
+                      ? "bg-gradient-to-r from-yellow-400 to-yellow-600 text-white shadow-md"
+                      : "text-blue-800 hover:text-yellow-600 hover:-translate-y-1 hover:drop-shadow-[0_0_6px_rgba(255,215,0,0.6)]"
+                    }
         `}
-      >
-        {link.label}
-      </button>
-    </li>
-  ))}
-</ul>
+                >
+                  {link.label}
+                </button>
+              </li>
+            ))}
+          </ul>
 
           {/* BOOK A SLOT BUTTON */}
           <motion.a
             href="https://147-snooker.netlify.app/booking"
+            target="_blank"
+            rel="noopener noreferrer"
             whileHover={{ scale: 1.08 }}
             whileTap={{ scale: 0.95 }}
             className="ml-4 px-5 py-2 rounded-lg text-sm font-semibold

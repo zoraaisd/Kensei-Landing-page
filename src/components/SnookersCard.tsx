@@ -25,16 +25,16 @@ const SnookersPage = () => {
       className="relative h-screen w-full overflow-hidden bg-black"
     >
       {/* Top Left Small Brand Label */}
-<div className="absolute top-6 left-6 z-20">
-  <div className="px-6 py-2 rounded-full
+      <div className="absolute top-6 left-6 z-20">
+        <div className="px-6 py-2 rounded-full
                   bg-emerald-900/40 backdrop-blur-md
                   border border-emerald-400/40
                   shadow-[0_0_20px_rgba(16,185,129,0.3)]">
-    <span className="text-emerald-300 text-sm tracking-widest font-semibold">
-      147 Snookers
-    </span>
-  </div>
-</div>
+          <span className="text-emerald-300 text-sm tracking-widest font-semibold">
+            147 Snookers
+          </span>
+        </div>
+      </div>
       {/* ================= BACKGROUND SLIDES ================= */}
       <AnimatePresence mode="wait">
         <motion.img
@@ -115,6 +115,8 @@ const SnookersPage = () => {
           >
             <a
               href="https://147-snooker.netlify.app/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-8 py-4 rounded-xl font-semibold
                          bg-gradient-to-r from-emerald-600 to-green-500
                          text-white
@@ -126,6 +128,8 @@ const SnookersPage = () => {
 
             <a
               href="https://147-snooker.netlify.app/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-8 py-4 rounded-xl font-semibold
                          border border-emerald-400
                          text-emerald-300

@@ -89,19 +89,21 @@ const OptimusCourses = () => {
                 </p>
               </div>
               {/* Apply Button */}
-            <motion.a
-              href="#apply"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="inline-block mb-14 px-10 py-4 rounded-xl font-semibold
+              <motion.a
+                href="https://www.optimusoverseasedu.com/courses"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="inline-block mb-14 px-10 py-4 rounded-xl font-semibold
                          bg-gradient-to-r from-blue-600 to-blue-500
                          text-white
                          shadow-[0_0_35px_rgba(59,130,246,0.6)]
                          hover:shadow-[0_0_50px_rgba(59,130,246,0.9)]
                          transition-all duration-300"
-            >
-              Apply Now
-            </motion.a>
+              >
+                Apply Now
+              </motion.a>
 
             </div>
 

@@ -25,16 +25,16 @@ const OptimusCard = () => {
       className="relative w-full py-24 min-h-screen flex items-center overflow-hidden bg-black"
     >
       {/* Top Left Small Brand Label */}
-<div className="absolute top-6 left-6 z-20">
-  <div className="px-6 py-2 rounded-full
+      <div className="absolute top-6 left-6 z-20">
+        <div className="px-6 py-2 rounded-full
                 bg-blue-900/40 backdrop-blur-md
                 border border-blue-400/40
                 shadow-[0_0_20px_rgba(59,130,246,0.35)]">
-  <span className="text-blue-300 text-sm tracking-widest font-semibold">
-    Optimus Overseas
-  </span>
-</div>
-</div>
+          <span className="text-blue-300 text-sm tracking-widest font-semibold">
+            Optimus Overseas
+          </span>
+        </div>
+      </div>
       {/* ===== Slideshow Background ===== */}
       <AnimatePresence mode="wait">
         <motion.img
@@ -96,7 +96,9 @@ const OptimusCard = () => {
           <div className="flex flex-wrap gap-4">
 
             <motion.a
-              href="#universities"
+              href="https://optimusoverseasedu.com/"
+              target="_blank"
+              rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="px-8 py-4 rounded-full font-semibold
@@ -109,7 +111,9 @@ const OptimusCard = () => {
             </motion.a>
 
             <motion.a
-              href="#consultation"
+              href="https://www.optimusoverseasedu.com/contact"
+              target="_blank"
+              rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="px-8 py-4 rounded-full font-semibold
@@ -129,11 +133,10 @@ const OptimusCard = () => {
         {slides.map((_, i) => (
           <div
             key={i}
-            className={`h-2 rounded-full transition-all duration-500 ${
-              i === index
+            className={`h-2 rounded-full transition-all duration-500 ${i === index
                 ? "w-8 bg-yellow-400 shadow-[0_0_15px_rgba(234,179,8,0.9)]"
                 : "w-2 bg-gray-500"
-            }`}
+              }`}
           />
         ))}
       </div>

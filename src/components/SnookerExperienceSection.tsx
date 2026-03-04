@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import snookerLogo from "@/assets/snookers-logo.webp";
+import snookerLogo from "@/assets/New1 snookers-logo.webp";
 
 const SnookerExperienceSection = () => {
   return (
@@ -14,23 +14,24 @@ const SnookerExperienceSection = () => {
           {/* ================= LEFT ================= */}
           <div className="md:col-span-5 flex flex-col justify-center items-center relative">
 
-            {/* Glow */}
-            <div className="absolute w-[480px] h-[480px] bg-emerald-500/20 blur-3xl rounded-full" />
+            <div className="absolute w-[700px] h-[700px] bg-emerald-500/20 blur-3xl rounded-full" />
 
             <motion.img
               src={snookerLogo}
               alt="Snooker Logo"
-              className="relative w-80 md:w-[420px] object-contain
-                         drop-shadow-[0_0_80px_rgba(16,185,129,0.5)]"
+              className="relative w-[85%] sm:w-[250px] md:w-[300px] lg:w-[400px]
+               object-contain
+               drop-shadow-[0_0_80px_rgba(16,185,129,0.5)]"
               initial={{ opacity: 0, x: -60 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 1 }}
               viewport={{ once: true }}
             />
 
-            <p className="mt-8 text-emerald-300 tracking-widest uppercase text-xs">
+            <p className="mt-8 text-emerald-300 tracking-widest uppercase text-xs text-center">
               Elite Snooker Lounge
             </p>
+
           </div>
 
           {/* ================= RIGHT ================= */}
@@ -90,6 +91,8 @@ const SnookerExperienceSection = () => {
             {/* CTA */}
             <motion.a
               href="https://147-snooker.netlify.app/"
+              target="_blank"
+              rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="inline-block px-12 py-4 rounded-xl font-semibold

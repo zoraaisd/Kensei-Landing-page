@@ -25,17 +25,17 @@ const DipDashCard = () => {
       className="relative w-full min-h-screen flex items-center overflow-hidden bg-black"
     >
 
-            {/* Top Left Small Brand Label */}
-<div className="absolute top-6 left-6 z-20">
-  <div className="px-6 py-2 rounded-full
+      {/* Top Left Small Brand Label */}
+      <div className="absolute top-6 left-6 z-20">
+        <div className="px-6 py-2 rounded-full
                 bg-purple-900/40 backdrop-blur-md
                 border border-purple-400/40
                 shadow-[0_0_20px_rgba(168,85,247,0.35)]">
-  <span className="text-purple-300 text-sm tracking-widest font-semibold">
-    Dip & Dash
-  </span>
-</div>
-</div>
+          <span className="text-purple-300 text-sm tracking-widest font-semibold">
+            Dip & Dash
+          </span>
+        </div>
+      </div>
       {/* ===== Slideshow Background ===== */}
       <AnimatePresence mode="wait">
         <motion.img
@@ -95,7 +95,9 @@ const DipDashCard = () => {
           <div className="flex flex-wrap gap-4">
 
             <motion.a
-              href="https://dipndash.netlify.app/"
+              href="https://www.dipanddash.com/"
+              target="_blank"
+              rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="px-8 py-4 rounded-full font-semibold
@@ -108,7 +110,9 @@ const DipDashCard = () => {
             </motion.a>
 
             <motion.a
-              href="https://dipndash.netlify.app/"
+              href="https://www.dipanddash.com"
+              target="_blank"
+              rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="px-8 py-4 rounded-full font-semibold
@@ -128,11 +132,10 @@ const DipDashCard = () => {
         {slides.map((_, i) => (
           <div
             key={i}
-            className={`h-2 rounded-full transition-all duration-500 ${
-              i === index
+            className={`h-2 rounded-full transition-all duration-500 ${i === index
                 ? "w-8 bg-purple-400 shadow-[0_0_15px_rgba(168,85,247,0.9)]"
                 : "w-2 bg-gray-500"
-            }`}
+              }`}
           />
         ))}
       </div>
