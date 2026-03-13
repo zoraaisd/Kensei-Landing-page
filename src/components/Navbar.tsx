@@ -11,6 +11,9 @@ const navLinks = [
   { label: "GameOfWar", href: "#gameofwar" },
   { label: "Dip & Dash", href: "#dipdash" },
   { label: "Optimus", href: "#optimus" },
+  { label: "Zora", href: "https://www.zoraglobalai.com/" },
+  { label: "Contact", href: "/contact" },
+  
 ];
 
 const Navbar = () => {
@@ -19,9 +22,13 @@ const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [active, setActive] = useState("#home");
 
+  const isExternalHref = (href: string) => href.startsWith("http");
+  const isSectionHref = (href: string) => href.startsWith("#");
+
   useEffect(() => {
     const handleScroll = () => {
       navLinks.forEach((link) => {
+        if (!isSectionHref(link.href)) return;
         const section = document.querySelector(link.href);
         if (section) {
           const rect = section.getBoundingClientRect();
@@ -40,12 +47,24 @@ const Navbar = () => {
     // Set active state based on current route
     if (location.pathname === "/about") {
       setActive("#about");
+    } else if (location.pathname === "/contact") {
+      setActive("/contact");
     } else if (location.pathname === "/") {
       setActive("#home");
     }
   }, [location.pathname]);
 
   const handleScrollTo = (href: string) => {
+    if (isExternalHref(href)) {
+      setMobileOpen(false);
+      window.open(href, "_blank", "noopener,noreferrer");
+      return;
+    }
+    if (href.startsWith("/")) {
+      navigate(href);
+      setMobileOpen(false);
+      return;
+    }
     // If About link, navigate to about page
     if (href === "#about") {
       navigate("/about");

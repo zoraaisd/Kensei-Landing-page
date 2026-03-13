@@ -1,0 +1,150 @@
+import { motion } from "framer-motion";
+import { Mail, Phone, MapPin } from "lucide-react";
+import { useState } from "react";
+import Navbar from "@/components/Navbar";
+import FooterSection from "@/components/FooterSection";
+
+const ContactPage = () => {
+
+  const [success, setSuccess] = useState(false);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(e.target);
+
+    const response = await fetch("https://formspree.io/f/mnjgvklw", {
+      method: "POST",
+      body: formData,
+      headers: {
+        Accept: "application/json",
+      },
+    });
+
+    if (response.ok) {
+      setSuccess(true);
+      e.target.reset();
+
+      setTimeout(() => {
+        setSuccess(false);
+      }, 4000);
+    }
+  };
+
+  return (
+    <div className="bg-black text-white overflow-hidden">
+      <Navbar />
+
+      {/* ================= HERO ================= */}
+      <section className="relative py-28 bg-gradient-to-b from-black via-blue-950 to-black text-center">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,215,0,0.08),transparent_70%)]" />
+
+        <motion.h1
+          className="relative text-5xl md:text-6xl font-extrabold mb-6"
+          initial={{ opacity: 0, y: -30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.9 }}
+        >
+          Contact <span className="text-yellow-400">Us</span>
+        </motion.h1>
+
+        <p className="relative max-w-3xl mx-auto text-gray-400 text-lg leading-relaxed px-6">
+          Reach out to Kensei Groups for partnerships, bookings, or general
+          inquiries. We are here to help.
+        </p>
+      </section>
+
+      {/* ================= CONTACT CARDS ================= */}
+      <section className="py-20 container mx-auto px-6 max-w-6xl">
+        <div className="grid md:grid-cols-3 gap-10">
+          <div className="bg-blue-900/20 p-8 rounded-3xl border border-yellow-400/20 text-center">
+            <Mail className="mx-auto mb-4 text-yellow-400" size={32} />
+            <h3 className="text-xl font-semibold mb-2">Email</h3>
+            <p className="text-gray-400">info@kenseigroups.com</p>
+          </div>
+
+          <div className="bg-blue-900/20 p-8 rounded-3xl border border-yellow-400/20 text-center">
+            <Phone className="mx-auto mb-4 text-yellow-400" size={32} />
+            <h3 className="text-xl font-semibold mb-2">Phone</h3>
+            <p className="text-gray-400">+91 8 124 123 000</p>
+          </div>
+
+          <div className="bg-blue-900/20 p-8 rounded-3xl border border-yellow-400/20 text-center">
+            <MapPin className="mx-auto mb-4 text-yellow-400" size={32} />
+            <h3 className="text-xl font-semibold mb-2">Location</h3>
+            <p className="text-gray-400">Chennai Tamilnadu India</p>
+          </div>
+        </div>
+      </section>
+
+      {/* ================= FORM ================= */}
+      <section className="pb-28 container mx-auto px-6 max-w-4xl">
+        <div className="bg-blue-900/20 p-10 rounded-3xl border border-yellow-400/20">
+          <h2 className="text-3xl font-bold mb-8 text-yellow-400 text-center">
+            Send Us a Message
+          </h2>
+
+          {success && (
+            <p className="text-center text-green-400 mb-6 font-semibold">
+              ✅ Thank you! Our team will contact you soon.
+            </p>
+          )}
+
+          <form
+            onSubmit={handleSubmit}
+            className="grid md:grid-cols-2 gap-6"
+          >
+            <input
+              type="text"
+              name="name"
+              placeholder="Full Name"
+              required
+              className="bg-black/60 border border-gray-700 rounded-lg px-4 py-3 text-white placeholder:text-gray-500 focus:outline-none focus:border-yellow-400"
+            />
+
+            <input
+              type="email"
+              name="email"
+              placeholder="Email Address"
+              required
+              className="bg-black/60 border border-gray-700 rounded-lg px-4 py-3 text-white placeholder:text-gray-500 focus:outline-none focus:border-yellow-400"
+            />
+
+            <input
+              type="text"
+              name="subject"
+              placeholder="Subject"
+              className="bg-black/60 border border-gray-700 rounded-lg px-4 py-3 text-white placeholder:text-gray-500 focus:outline-none focus:border-yellow-400 md:col-span-2"
+            />
+
+            <textarea
+              name="message"
+              placeholder="Your Message"
+              rows={6}
+              required
+              className="bg-black/60 border border-gray-700 rounded-lg px-4 py-3 text-white placeholder:text-gray-500 focus:outline-none focus:border-yellow-400 md:col-span-2"
+            />
+
+            <div className="md:col-span-2 text-center">
+              <button
+                type="submit"
+                className="px-6 py-3 rounded-lg text-sm font-semibold
+                           bg-blue-900 text-white
+                           hover:bg-blue-800
+                           hover:shadow-[0_0_15px_rgba(255,215,0,0.6)]
+                           transition-all duration-300"
+              >
+                Send Message
+              </button>
+            </div>
+          </form>
+
+        </div>
+      </section>
+
+      <FooterSection />
+    </div>
+  );
+};
+
+export default ContactPage;

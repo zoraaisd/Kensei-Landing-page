@@ -18,18 +18,53 @@ const FooterSection = () => (
 
         {/* LEFT — LINKS */}
         <div>
-          <h3 className="text-base font-semibold text-gray-800 mb-4 tracking-wide">
-            Quick Links
-          </h3>
+  <h3 className="text-base font-semibold text-gray-800 mb-4 tracking-wide">
+    Quick Links
+  </h3>
 
-          <div className="flex flex-col gap-3 text-gray-600 text-sm">
-            <Link to="/" className="hover:text-yellow-600 transition">Home</Link>
-            <Link to="/snookers" className="hover:text-yellow-600 transition">Snookers</Link>
-            <Link to="/gameofwar" className="hover:text-yellow-600 transition">GameOfWar</Link>
-            <Link to="/dipdash" className="hover:text-yellow-600 transition">Dip & Dash</Link>
-            <Link to="/optimus" className="hover:text-yellow-600 transition">Optimus</Link>
-          </div>
-        </div>
+  <div className="flex flex-col gap-3 text-gray-600 text-sm">
+
+    <a href="#" className="hover:text-yellow-600 transition">
+    Home
+  </a>
+<a 
+      href="https://147-snooker.netlify.app/" 
+      target="_blank" 
+      rel="noopener noreferrer"
+      className="hover:text-yellow-600 transition"
+    >
+      Snookers
+    </a>
+
+    <a 
+      href="https://147-snooker.netlify.app/" 
+      target="_blank" 
+      rel="noopener noreferrer"
+      className="hover:text-yellow-600 transition"
+    >
+      GameOfWar
+    </a>
+
+    <a 
+      href="https://www.dipanddash.com/" 
+      target="_blank" 
+      rel="noopener noreferrer"
+      className="hover:text-yellow-600 transition"
+    >
+      Dip & Dash
+    </a>
+
+    <a 
+      href="https://www.optimusoverseasedu.com/" 
+      target="_blank" 
+      rel="noopener noreferrer"
+      className="hover:text-yellow-600 transition"
+    >
+      Optimus
+    </a>
+
+  </div>
+</div>
 
         {/* CENTER — CONTACT */}
         <div>
