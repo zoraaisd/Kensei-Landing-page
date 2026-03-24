@@ -11,6 +11,33 @@ import coFounderImg from "@/assets/Co-Founder.webp";
 import Navbar from "@/components/Navbar";
 import FooterSection from "@/components/FooterSection";
 
+const subBrands = [
+  {
+    name: "Elite 147 Snooker",
+    alt: "Snookers",
+    image: snookerLogo,
+    href: "https://147-snooker.netlify.app/",
+  },
+  {
+    name: "Game Of War",
+    alt: "Game Of War",
+    image: gameLogo,
+    href: "https://147-snooker.netlify.app/",
+  },
+  {
+    name: "Dip&Dash",
+    alt: "Dip & Dash",
+    image: dipLogo,
+    href: "https://www.dipanddash.com/",
+  },
+  {
+    name: "Optimus Global",
+    alt: "Optimus Overseas",
+    image: optimusLogo,
+    href: "https://www.optimusoverseasedu.com/",
+  },
+];
+
 const AboutPage = () => {
   return (
     <div className="bg-black text-white overflow-hidden">
@@ -127,7 +154,7 @@ const AboutPage = () => {
             </div>
 
             <h3 className="text-2xl font-bold mb-2">
-              Founder & Director Manager
+              Founder & Managing Director
             </h3>
 
             <p className="text-yellow-400 mb-4">
@@ -223,54 +250,24 @@ const AboutPage = () => {
     </h2>
 
     <div className="grid md:grid-cols-4 gap-16 items-center">
-
-      <div className="space-y-6">
-        <img
-          src={snookerLogo}
-          className="h-20 md:h-24 mx-auto object-contain
-                     hover:scale-105 transition-transform duration-300"
-          alt="Snookers"
-        />
-        <p className="text-gray-400 text-sm">
-          Elite 147 Snooker
-        </p>
-      </div>
-
-      <div className="space-y-6">
-        <img
-          src={gameLogo}
-          className="h-20 md:h-24 mx-auto object-contain
-                     hover:scale-105 transition-transform duration-300"
-          alt="Game Of War"
-        />
-        <p className="text-gray-400 text-sm">
-          Game Of War
-        </p>
-      </div>
-
-      <div className="space-y-6">
-        <img
-          src={dipLogo}
-          className="h-20 md:h-24 mx-auto object-contain
-                     hover:scale-105 transition-transform duration-300"
-          alt="Dip & Dash"
-        />
-        <p className="text-gray-400 text-sm">
-          Dip&Dash
-        </p>
-      </div>
-
-      <div className="space-y-6">
-        <img
-          src={optimusLogo}
-          className="h-20 md:h-24 mx-auto object-contain
-                     hover:scale-105 transition-transform duration-300"
-          alt="Optimus Overseas"
-        />
-        <p className="text-gray-400 text-sm">
-          Optimus Global
-        </p>
-      </div>
+      {subBrands.map((brand) => (
+        <a
+          key={brand.name}
+          href={brand.href}
+          target="_blank"
+          rel="noreferrer"
+          className="space-y-6 block group"
+        >
+          <img
+            src={brand.image}
+            className="h-20 md:h-24 mx-auto object-contain transition-transform duration-300 group-hover:scale-105"
+            alt={brand.alt}
+          />
+          <p className="text-gray-400 text-sm group-hover:text-yellow-400 transition-colors duration-300">
+            {brand.name}
+          </p>
+        </a>
+      ))}
 
     </div>
 
