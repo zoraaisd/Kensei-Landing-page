@@ -5,52 +5,71 @@ import { useNavigate, useLocation } from "react-router-dom";
 import kenseiLogo from "@/assets/Kensei-logo.webp";
 
 const navLinks = [
-  { label: "Home", href: "#home" },
-  { label: "About", href: "#about" },
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
   { label: "Snookers", href: "#snookers" },
   { label: "GameOfWar", href: "#gameofwar" },
   { label: "Dip & Dash", href: "#dipdash" },
   { label: "Optimus", href: "#optimus" },
   { label: "Zora", href: "https://www.zoraglobalai.com/" },
   { label: "Contact", href: "/contact" },
-  
+];
+
+const homeSectionGroups = [
+  { href: "/", selector: "#home" },
+  { href: "#snookers", selector: "#snookers" },
+  { href: "#gameofwar", selector: "#gameofwar" },
+  { href: "#dipdash", selector: "#dipdash" },
+  { href: "#optimus", selector: "#optimus" },
 ];
 
 const Navbar = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [active, setActive] = useState("#home");
+  const [active, setActive] = useState("/");
 
   const isExternalHref = (href: string) => href.startsWith("http");
   const isSectionHref = (href: string) => href.startsWith("#");
 
   useEffect(() => {
     const handleScroll = () => {
-      navLinks.forEach((link) => {
-        if (!isSectionHref(link.href)) return;
-        const section = document.querySelector(link.href);
-        if (section) {
-          const rect = section.getBoundingClientRect();
-          if (rect.top <= 120 && rect.bottom >= 120) {
-            setActive(link.href);
-          }
+      if (location.pathname !== "/") return;
+
+      const marker = window.scrollY + 120;
+      let currentSection = "/";
+
+      for (const group of homeSectionGroups) {
+        const section = document.querySelector(group.selector);
+        if (!section) continue;
+
+        const sectionTop =
+          section.getBoundingClientRect().top + window.scrollY;
+
+        if (marker >= sectionTop) {
+          currentSection = group.href;
+        } else {
+          break;
         }
-      });
+      }
+
+      setActive(currentSection);
     };
 
     window.addEventListener("scroll", handleScroll);
+    handleScroll();
+
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [location.pathname]);
 
   useEffect(() => {
     // Set active state based on current route
     if (location.pathname === "/about") {
-      setActive("#about");
+      setActive("/about");
     } else if (location.pathname === "/contact") {
       setActive("/contact");
     } else if (location.pathname === "/") {
-      setActive("#home");
+      setActive("/");
     }
   }, [location.pathname]);
 
@@ -60,14 +79,13 @@ const Navbar = () => {
       window.open(href, "_blank", "noopener,noreferrer");
       return;
     }
+
     if (href.startsWith("/")) {
-      navigate(href);
-      setMobileOpen(false);
-      return;
-    }
-    // If About link, navigate to about page
-    if (href === "#about") {
-      navigate("/about");
+      if (location.pathname === href) {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      } else {
+        navigate(href);
+      }
       setMobileOpen(false);
       return;
     }

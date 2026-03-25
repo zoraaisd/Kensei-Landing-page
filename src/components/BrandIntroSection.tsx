@@ -1,5 +1,8 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import kenseiLogo from "@/assets/Kensie-logo.webp";
+
+const MotionLink = motion(Link);
 
 const BrandIntroSection = () => {
   return (
@@ -67,8 +70,8 @@ const BrandIntroSection = () => {
             </motion.p>
 
             <div className="flex gap-6">
-              <motion.a
-                href="#about"
+              <MotionLink
+                to="/about"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 rounded-xl font-semibold
@@ -79,10 +82,10 @@ const BrandIntroSection = () => {
                            transition-all duration-300"
               >
                 Discover More
-              </motion.a>
+              </MotionLink>
 
-              <motion.a
-                href="#contact"
+              <MotionLink
+                to="/contact"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 rounded-xl font-semibold
@@ -92,7 +95,7 @@ const BrandIntroSection = () => {
                            transition-all duration-300"
               >
                 Connect
-              </motion.a>
+              </MotionLink>
             </div>
 
           </div>

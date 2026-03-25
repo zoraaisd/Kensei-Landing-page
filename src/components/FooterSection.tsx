@@ -24,10 +24,19 @@ const FooterSection = () => (
 
   <div className="flex flex-col gap-3 text-gray-600 text-sm">
 
-    <a href="#" className="hover:text-yellow-600 transition">
-    Home
-  </a>
-<a 
+    <Link to="/" className="hover:text-yellow-600 transition">
+      Home
+    </Link>
+
+    <Link to="/about" className="hover:text-yellow-600 transition">
+      About
+    </Link>
+
+    <Link to="/contact" className="hover:text-yellow-600 transition">
+      Contact Us
+    </Link>
+
+    <a 
       href="https://147-snooker.netlify.app/" 
       target="_blank" 
       rel="noopener noreferrer"
