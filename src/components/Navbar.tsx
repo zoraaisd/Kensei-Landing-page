@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { useNavigate, useLocation } from "react-router-dom";
@@ -10,9 +10,13 @@ const navLinks = [
   { label: "Snookers", href: "#snookers" },
   { label: "GameOfWar", href: "#gameofwar" },
   { label: "Dip & Dash", href: "#dipdash" },
-  { label: "Optimus", href: "#optimus" },
-  { label: "Zora", href: "https://www.zoraglobalai.com/" },
   { label: "Contact", href: "/contact" },
+];
+
+const companyLinks = [
+  { label: "Optimus", href: "#optimus" },
+  { label: "Optimus Manpower", href: "#optimus-manpower" },
+  { label: "Zora", href: "https://www.zoraglobalai.com/" },
 ];
 
 const homeSectionGroups = [
@@ -21,13 +25,17 @@ const homeSectionGroups = [
   { href: "#gameofwar", selector: "#gameofwar" },
   { href: "#dipdash", selector: "#dipdash" },
   { href: "#optimus", selector: "#optimus" },
+  { href: "#optimus-manpower", selector: "#optimus-manpower" },
 ];
 
 const Navbar = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [companiesOpen, setCompaniesOpen] = useState(false);
   const [active, setActive] = useState("/");
+  const companiesRef = useRef<HTMLLIElement | null>(null);
+  const navbarRef = useRef<HTMLElement | null>(null);
 
   const isExternalHref = (href: string) => href.startsWith("http");
   const isSectionHref = (href: string) => href.startsWith("#");
@@ -71,7 +79,44 @@ const Navbar = () => {
     } else if (location.pathname === "/") {
       setActive("/");
     }
+    setCompaniesOpen(false);
   }, [location.pathname]);
+
+  useEffect(() => {
+    if (!companiesOpen) return;
+
+    const handleClickOutside = (event: MouseEvent) => {
+      if (!companiesRef.current) return;
+      if (!companiesRef.current.contains(event.target as Node)) {
+        setCompaniesOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [companiesOpen]);
+
+  useEffect(() => {
+    if (!mobileOpen) return;
+
+    const handleClickOutside = (event: MouseEvent) => {
+      if (!navbarRef.current) return;
+      if (!navbarRef.current.contains(event.target as Node)) {
+        setMobileOpen(false);
+      }
+    };
+
+    const handleScroll = () => {
+      setMobileOpen(false);
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [mobileOpen]);
 
   const handleScrollTo = (href: string) => {
     if (isExternalHref(href)) {
@@ -120,6 +165,7 @@ const Navbar = () => {
 
   return (
     <motion.nav
+      ref={navbarRef}
       initial={{ y: -60, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6 }}
@@ -158,24 +204,73 @@ const Navbar = () => {
                 </button>
               </li>
             ))}
+
+            <li ref={companiesRef} className="relative">
+              <button
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setCompaniesOpen((prev) => !prev);
+                }}
+                className={`
+          relative text-sm font-semibold tracking-wide px-4 py-2 rounded-md
+          transition-all duration-300
+          ${companyLinks.some((link) => active === link.href)
+                    ? "bg-gradient-to-r from-yellow-400 to-yellow-600 text-white shadow-md"
+                    : "text-blue-800 hover:text-yellow-600 hover:-translate-y-1 hover:drop-shadow-[0_0_6px_rgba(255,215,0,0.6)]"
+                  }
+        `}
+                aria-haspopup="menu"
+                aria-expanded={companiesOpen}
+              >
+                Companies
+              </button>
+
+              <AnimatePresence>
+                {companiesOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 10 }}
+                    transition={{ duration: 0.2 }}
+                    className="absolute left-0 mt-3 min-w-[220px] rounded-xl border border-blue-100 bg-white shadow-lg"
+                  >
+                    <ul className="flex flex-col py-2">
+                      {companyLinks.map((link) => (
+                        <li key={link.label}>
+                          <button
+                            onClick={() => {
+                              setCompaniesOpen(false);
+                              handleScrollTo(link.href);
+                            }}
+                            className={`flex w-full items-center px-4 py-2 text-sm font-medium transition
+                              ${active === link.href
+                                ? "text-yellow-700"
+                                : "text-blue-800 hover:bg-yellow-50 hover:text-yellow-700"
+                              }`}
+                          >
+                            {link.label}
+                          </button>
+                        </li>
+                      ))}
+                    </ul>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </li>
           </ul>
 
-          {/* BOOK A SLOT BUTTON */}
-          <motion.a
-            href="https://147-snooker.netlify.app/booking"
-            target="_blank"
-            rel="noopener noreferrer"
-            whileHover={{ scale: 1.08 }}
-            whileTap={{ scale: 0.95 }}
-            className="ml-4 px-5 py-2 rounded-lg text-sm font-semibold
-                       bg-blue-900 text-white
-                       shadow-md
-                       hover:bg-blue-800
-                       hover:shadow-[0_0_15px_rgba(255,215,0,0.6)]
-                       transition-all duration-300"
-          >
-            Book a Slot
-          </motion.a>
+          <li>
+            <a
+              href="https://147-snooker.netlify.app/booking"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="relative text-sm font-semibold tracking-wide px-4 py-2 rounded-md
+                         transition-all duration-300
+                         bg-blue-900 text-white hover:bg-blue-800 hover:drop-shadow-[0_0_8px_rgba(255,215,0,0.4)]"
+            >
+              Book a Slot
+            </a>
+          </li>
 
         </div>
 
@@ -198,12 +293,12 @@ const Navbar = () => {
             transition={{ duration: 0.4 }}
             className="md:hidden bg-white border-t border-gray-200"
           >
-            <ul className="flex flex-col items-center gap-4 py-6">
+            <ul className="flex flex-col items-stretch gap-2 py-4">
               {navLinks.map((link) => (
                 <li key={link.label}>
                   <button
                     onClick={() => handleScrollTo(link.href)}
-                    className={`text-base font-medium
+                    className={`w-full px-6 py-2 text-left text-sm font-semibold tracking-wide
                       ${active === link.href ? "text-blue-900" : "text-blue-800 hover:text-blue-900"}`}
                   >
                     {link.label}
@@ -211,19 +306,59 @@ const Navbar = () => {
                 </li>
               ))}
 
-              {/* MOBILE BOOK BUTTON */}
-              <motion.a
-                href=""
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="mt-4 px-6 py-2 rounded-lg text-sm font-semibold
-                           bg-blue-900 text-white
-                           hover:bg-blue-800
-                           hover:shadow-[0_0_15px_rgba(255,215,0,0.6)]
-                           transition-all duration-300"
-              >
-                Book a Slot
-              </motion.a>
+              <li key="companies-mobile">
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setCompaniesOpen((prev) => !prev);
+                  }}
+                  className={`w-full px-6 py-2 text-left text-sm font-semibold tracking-wide flex items-center justify-between
+                    ${active === companyLinks[0]?.href ? "text-blue-900" : "text-blue-800 hover:text-blue-900"}`}
+                >
+                  Companies
+                  <span className="text-blue-600">{companiesOpen ? "-" : "+"}</span>
+                </button>
+                <AnimatePresence>
+                  {companiesOpen && (
+                    <motion.ul
+                      initial={{ height: 0 }}
+                      animate={{ height: "auto" }}
+                      exit={{ height: 0 }}
+                      transition={{ duration: 0.3 }}
+                      className="flex flex-col overflow-hidden"
+                    >
+                      {companyLinks.map((link) => (
+                        <li key={link.label}>
+                          <button
+                            onClick={() => {
+                              setCompaniesOpen(false);
+                              handleScrollTo(link.href);
+                            }}
+                            className={`w-full px-12 py-2 text-left text-sm font-medium transition
+                              ${active === link.href
+                                ? "text-yellow-700 bg-blue-50"
+                                : "text-blue-800 hover:bg-blue-50 hover:text-yellow-700"
+                              }`}
+                          >
+                            {link.label}
+                          </button>
+                        </li>
+                      ))}
+                    </motion.ul>
+                  )}
+                </AnimatePresence>
+              </li>
+
+              <li key="book-slot-mobile">
+                <a
+                  href="https://147-snooker.netlify.app/booking"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block px-6 py-2 ml-6 text-sm font-semibold tracking-wide bg-blue-900 text-white hover:bg-blue-800 rounded-md transition-all duration-300"
+                >
+                  Book a Slot
+                </a>
+              </li>
             </ul>
           </motion.div>
         )}
@@ -233,3 +368,5 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+

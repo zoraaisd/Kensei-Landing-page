@@ -28,32 +28,32 @@ const DipDashCard = () => {
       {/* Top Left Small Brand Label */}
       <div className="absolute top-6 left-6 z-20">
         <div className="px-6 py-2 rounded-full
-                bg-purple-900/40 backdrop-blur-md
-                border border-purple-400/40
-                shadow-[0_0_20px_rgba(168,85,247,0.35)]">
-          <span className="text-purple-300 text-sm tracking-widest font-semibold">
+                bg-zinc-900/40 backdrop-blur-md
+                border border-orange-500/40
+                shadow-[0_0_20px_rgba(234,88,12,0.5)]">
+          <span className="text-yellow-400 text-sm tracking-widest font-semibold">
             Dip & Dash
           </span>
         </div>
       </div>
       {/* ===== Slideshow Background ===== */}
-      <AnimatePresence mode="wait">
+      <AnimatePresence mode="sync" initial={false}>
         <motion.img
           key={index}
           src={slides[index]}
-          initial={{ opacity: 0, scale: 1.1 }}
-          animate={{ opacity: 1, scale: 1 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 1.4 }}
-          className="absolute inset-0 w-full h-full object-cover"
+          transition={{ duration: 0.6, ease: "linear" }}
+          className="absolute inset-0 w-full h-full object-cover will-change-transform"
         />
       </AnimatePresence>
 
       {/* Dark Cinematic Overlay */}
       <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-transparent" />
 
-      {/* Purple Accent Glow */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,rgba(168,85,247,0.25),transparent_60%)]" />
+      {/* Orange/Red Fiery Glow */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,rgba(234,88,12,0.25),transparent_60%)]" />
 
       {/* ===== Content Left Aligned ===== */}
       <div className="relative z-10 container mx-auto px-8 lg:px-20 max-w-6xl">
@@ -67,14 +67,14 @@ const DipDashCard = () => {
         >
 
           {/* Small Tagline */}
-          <p className="text-purple-400 uppercase tracking-widest text-sm mb-4">
+          <p className="text-yellow-400 uppercase tracking-widest text-sm mb-4">
             Next-Gen Street Flavors
           </p>
 
           {/* Main Heading */}
           <h1 className="text-5xl md:text-7xl font-extrabold leading-tight mb-6 text-white">
             Taste Beyond
-            <span className="block bg-gradient-to-r from-purple-400 via-white to-purple-500 bg-clip-text text-transparent drop-shadow-[0_0_25px_rgba(168,85,247,0.6)]">
+            <span className="block bg-gradient-to-r from-orange-400 via-yellow-400 to-orange-500 bg-clip-text text-transparent drop-shadow-[0_0_25px_rgba(234,88,12,0.8)]">
               Imagination.
             </span>
           </h1>
@@ -95,29 +95,29 @@ const DipDashCard = () => {
           <div className="flex flex-wrap gap-4">
 
             <motion.a
-              href="https://www.dipanddash.com/"
+              href="https://www.dipanddash.com/food"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="px-8 py-4 rounded-full font-semibold
-                         bg-purple-600 hover:bg-purple-500
+                         bg-orange-600 hover:bg-orange-500
                          text-white
-                         shadow-[0_0_30px_rgba(168,85,247,0.6)]
+                         shadow-[0_0_30px_rgba(234,88,12,0.7)]
                          transition"
             >
               Explore Menu →
             </motion.a>
 
             <motion.a
-              href="https://www.dipanddash.com"
+              href="https://www.dipanddash.com/combos"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="px-8 py-4 rounded-full font-semibold
-                         border border-purple-500 text-purple-400
-                         hover:bg-purple-500 hover:text-white
+                         border border-yellow-400 text-yellow-400
+                         hover:bg-yellow-400 hover:text-black
                          transition"
             >
               Special Combos
@@ -133,11 +133,22 @@ const DipDashCard = () => {
           <div
             key={i}
             className={`h-2 rounded-full transition-all duration-500 ${i === index
-                ? "w-8 bg-purple-400 shadow-[0_0_15px_rgba(168,85,247,0.9)]"
-                : "w-2 bg-gray-500"
+                ? "w-8 bg-yellow-400 shadow-[0_0_15px_rgba(250,204,21,0.9)]"
+                : "w-2 bg-orange-600"
               }`}
           />
         ))}
+      </div>
+
+      {/* Slide Progress Bar */}
+      <div className="absolute bottom-0 left-0 h-1 w-full bg-black/40">
+        <motion.div
+          key={index}
+          initial={{ width: 0 }}
+          animate={{ width: "100%" }}
+          transition={{ duration: 4.5, ease: "linear" }}
+          className="h-full bg-gradient-to-r from-orange-500 to-yellow-400"
+        />
       </div>
 
     </section>

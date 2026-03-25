@@ -36,15 +36,15 @@ const SnookersPage = () => {
         </div>
       </div>
       {/* ================= BACKGROUND SLIDES ================= */}
-      <AnimatePresence mode="wait">
+      <AnimatePresence mode="sync" initial={false}>
         <motion.img
           key={index}
           src={slides[index]}
-          initial={{ opacity: 0, scale: 1.1 }}
-          animate={{ opacity: 1, scale: 1 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 1.6, ease: "easeInOut" }}
-          className="absolute inset-0 w-full h-full object-cover"
+          transition={{ duration: 0.6, ease: "linear" }}
+          className="absolute inset-0 w-full h-full object-cover will-change-opacity"
         />
       </AnimatePresence>
 
@@ -114,7 +114,7 @@ const SnookersPage = () => {
             className="flex gap-4"
           >
             <a
-              href="https://147-snooker.netlify.app/"
+              href="https://147-snooker.netlify.app/booking?type=SNOOKER&id=SNOOKER"
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-4 rounded-xl font-semibold

@@ -1,14 +1,16 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 
-/* ===== ADD 3 CAMPUS / EDUCATION IMAGES HERE ===== */
-import slide1 from "@/assets/optimus1.webp";
-import slide2 from "@/assets/optimus2.webp";
-import slide3 from "@/assets/optimus3.webp";
+/* ===== ADD YOUR 3 IMAGES HERE ===== */
+import slide1 from "@/assets/opt-man1.jpg";
+import slide2 from "@/assets/opt-man2.jpg";
+import slide3 from "@/assets/opt-man3.jpg";
+import slide4 from "@/assets/opt-man4.jpg";
+import slide5 from "@/assets/opt-man5.jpg";
 
-const slides = [slide1, slide2, slide3];
+const slides = [slide1, slide2, slide3, slide4, slide5];
 
-const OptimusCard = () => {
+const OptimusManpowerCard = () => {
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
@@ -21,20 +23,21 @@ const OptimusCard = () => {
 
   return (
     <section
-      id="optimus"
+      id="optimus-manpower"
       className="relative w-full py-24 min-h-screen flex items-center overflow-hidden bg-black"
     >
       {/* Top Left Small Brand Label */}
       <div className="absolute top-6 left-6 z-20">
         <div className="px-6 py-2 rounded-full
-                bg-blue-900/40 backdrop-blur-md
-                border border-blue-400/40
-                shadow-[0_0_20px_rgba(59,130,246,0.35)]">
-          <span className="text-blue-300 text-sm tracking-widest font-semibold">
-            Optimus Overseas
+                bg-zinc-900/50 backdrop-blur-md
+                border border-gray-400/50
+                shadow-[0_0_20px_rgba(192,192,192,0.3)]">
+          <span className="text-gray-200 text-sm tracking-widest font-semibold">
+            Optimus Manpower
           </span>
         </div>
       </div>
+
       {/* ===== Slideshow Background ===== */}
       <AnimatePresence mode="sync" initial={false}>
         <motion.img
@@ -48,13 +51,13 @@ const OptimusCard = () => {
         />
       </AnimatePresence>
 
-      {/* Blue Professional Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-950/90 via-blue-900/75 to-black/90" />
+      {/* Dark Cinematic Overlay - Black/Grey */}
+      <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-zinc-900/80 to-black/90" />
 
-      {/* Gold Elegant Glow */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,rgba(234,179,8,0.18),transparent_60%)]" />
+      {/* Silver Accent Glow */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,rgba(209,213,219,0.12),transparent_60%)]" />
 
-      {/* ===== Content ===== */}
+      {/* ===== Content Left Aligned ===== */}
       <div className="relative z-10 container mx-auto px-8 lg:px-20 max-w-6xl">
 
         <motion.div
@@ -66,62 +69,60 @@ const OptimusCard = () => {
         >
 
           {/* Small Tagline */}
-          <p className="text-yellow-400 uppercase tracking-widest text-sm mb-4">
-            Global Education Pathways
+          <p className="text-gray-300 uppercase tracking-widest text-sm mb-4">
+            Workforce Solutions & HR Excellence
           </p>
 
           {/* Main Heading */}
           <h1 className="text-5xl md:text-7xl font-extrabold leading-tight mb-6 text-white">
-            Study Beyond
-            <span className="block bg-gradient-to-r from-blue-300 via-yellow-400 to-blue-400 bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(59,130,246,0.6)]">
-              Boundaries.
+            Elite Talent,
+            <span className="block bg-gradient-to-r from-gray-300 via-white to-gray-400 bg-clip-text text-transparent drop-shadow-[0_0_25px_rgba(209,213,219,0.6)]">
+              Strategic Growth.
             </span>
           </h1>
 
-          {/* Quote */}
-          <p className="italic text-gray-300 mb-6">
-            “Your global academic journey starts here.”
+          {/* Quote Style Line */}
+          <p className="italic text-gray-400 mb-6">
+            "Where expertise meets opportunity."
           </p>
 
           {/* Paragraph */}
-          <p className="text-gray-200 text-lg leading-relaxed mb-8">
-            Optimus Overseas empowers students to unlock international
-            education opportunities with confidence and clarity.
-            From personalized counseling to university admissions
-            and visa support, we guide you every step toward
-            academic excellence and global success.
+          <p className="text-gray-300 text-lg leading-relaxed mb-8">
+            Optimus Manpower is your strategic partner in building world-class teams.
+            We connect exceptional talent with leading organizations, delivering
+            comprehensive HR solutions that drive growth, innovation, and sustained success.
           </p>
 
           {/* Buttons */}
           <div className="flex flex-wrap gap-4">
 
             <motion.a
-              href="https://www.optimusoverseasedu.com/universities"
+              href="https://www.optimusglobalhr.com/jobs#jobs-hero"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-8 py-4 rounded-full font-semibold
-                         bg-blue-600 hover:bg-blue-500
-                         text-white
-                         shadow-[0_0_30px_rgba(59,130,246,0.6)]
-                         transition"
+              className="px-8 py-3 rounded-lg font-semibold
+                         bg-white text-black
+                         hover:bg-gray-200
+                         shadow-[0_0_30px_rgba(209,213,219,0.5)]
+                         transition-all duration-300"
             >
-              Explore Universities →
+              Explore Opportunities →
             </motion.a>
 
             <motion.a
-              href="https://www.optimusoverseasedu.com/contact"
+              href="https://www.optimusglobalhr.com/contact"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-8 py-4 rounded-full font-semibold
-                         border border-yellow-400 text-yellow-400
-                         hover:bg-yellow-400 hover:text-black
-                         transition"
+              className="px-8 py-3 rounded-lg font-semibold
+                         border border-gray-300 text-gray-200
+                         hover:bg-gray-300 hover:text-black
+                         transition-all duration-300"
             >
-              Free Consultation
+              Get In Touch
             </motion.a>
 
           </div>
@@ -134,8 +135,8 @@ const OptimusCard = () => {
           <div
             key={i}
             className={`h-2 rounded-full transition-all duration-500 ${i === index
-                ? "w-8 bg-yellow-400 shadow-[0_0_15px_rgba(234,179,8,0.9)]"
-                : "w-2 bg-gray-500"
+                ? "w-8 bg-gray-300 shadow-[0_0_15px_rgba(209,213,219,0.9)]"
+                : "w-2 bg-gray-600"
               }`}
           />
         ))}
@@ -148,7 +149,7 @@ const OptimusCard = () => {
           initial={{ width: 0 }}
           animate={{ width: "100%" }}
           transition={{ duration: 5, ease: "linear" }}
-          className="h-full bg-yellow-400"
+          className="h-full bg-gray-300"
         />
       </div>
 
@@ -156,4 +157,4 @@ const OptimusCard = () => {
   );
 };
 
-export default OptimusCard;
+export default OptimusManpowerCard;

@@ -16,66 +16,82 @@ const FooterSection = () => (
       {/* MAIN GRID */}
       <div className="grid lg:grid-cols-3 gap-10 items-start">
 
-        {/* LEFT — LINKS */}
+        {/* LEFT- LINKS */}
         <div>
-  <h3 className="text-base font-semibold text-gray-800 mb-4 tracking-wide">
-    Quick Links
-  </h3>
+          <h3 className="text-base font-semibold text-gray-800 mb-4 tracking-wide">
+            Quick Links
+          </h3>
 
-  <div className="flex flex-col gap-3 text-gray-600 text-sm">
+          <div className="grid grid-cols-2 gap-x-6 gap-y-3 text-gray-600 text-sm text-left">
+            <Link to="/" className="hover:text-yellow-600 transition">
+              Home
+            </Link>
 
-    <Link to="/" className="hover:text-yellow-600 transition">
-      Home
-    </Link>
+            <Link to="/about" className="hover:text-yellow-600 transition">
+              About
+            </Link>
 
-    <Link to="/about" className="hover:text-yellow-600 transition">
-      About
-    </Link>
+            <Link to="/contact" className="hover:text-yellow-600 transition">
+              Contact Us
+            </Link>
 
-    <Link to="/contact" className="hover:text-yellow-600 transition">
-      Contact Us
-    </Link>
+            <a
+              href="https://147-snooker.netlify.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-yellow-600 transition"
+            >
+              Snookers
+            </a>
 
-    <a 
-      href="https://147-snooker.netlify.app/" 
-      target="_blank" 
-      rel="noopener noreferrer"
-      className="hover:text-yellow-600 transition"
-    >
-      Snookers
-    </a>
+            <a
+              href="https://147-snooker.netlify.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-yellow-600 transition"
+            >
+              Game Of War
+            </a>
 
-    <a 
-      href="https://147-snooker.netlify.app/" 
-      target="_blank" 
-      rel="noopener noreferrer"
-      className="hover:text-yellow-600 transition"
-    >
-      GameOfWar
-    </a>
+            <a
+              href="https://www.dipanddash.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-yellow-600 transition"
+            >
+              Dip & Dash
+            </a>
 
-    <a 
-      href="https://www.dipanddash.com/" 
-      target="_blank" 
-      rel="noopener noreferrer"
-      className="hover:text-yellow-600 transition"
-    >
-      Dip & Dash
-    </a>
+            <a
+              href="https://www.optimusoverseasedu.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-yellow-600 transition"
+            >
+              Optimus Global
+            </a>
 
-    <a 
-      href="https://www.optimusoverseasedu.com/" 
-      target="_blank" 
-      rel="noopener noreferrer"
-      className="hover:text-yellow-600 transition"
-    >
-      Optimus
-    </a>
+            <a
+              href="https://www.optimusglobalhr.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-yellow-600 transition"
+            >
+              Optimus Manpower
+            </a>
 
-  </div>
-</div>
+            <a
+              href="https://www.zoraglobalai.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-yellow-600 transition"
+            >
+              Zora
+            </a>
+          </div>
+        </div>
 
-        {/* CENTER — CONTACT */}
+        {/* CENTER- CONTACT */}
         <div>
           <h3 className="text-base font-semibold text-gray-800 mb-4 tracking-wide">
             Contact
@@ -95,7 +111,7 @@ const FooterSection = () => (
 
             <div className="flex items-center gap-2">
               <Mail size={14} className="text-yellow-600" />
-              <span>info@kenseigroups.com</span>
+              <span>info@kenseifnbgroup.com</span>
             </div>
 
           </div>
@@ -116,7 +132,7 @@ const FooterSection = () => (
           </div>
         </div>
 
-        {/* RIGHT — MAP */}
+        {/* RIGHT- MAP */}
         <div>
           <h3 className="text-base font-semibold text-gray-800 mb-4 tracking-wide">
             Location

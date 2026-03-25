@@ -14,7 +14,7 @@ const BrandIntroSection = () => {
       <div className="relative z-10 container mx-auto px-6">
         <div className="grid md:grid-cols-12 gap-12 items-center">
 
-          {/* ===== LEFT — LOGO (Clean & Bigger) ===== */}
+          {/* ===== LEFT- LOGO (Clean & Bigger) ===== */}
           <div className="md:col-span-5 flex justify-center md:justify-start relative">
 
             <div className="absolute w-[420px] h-[420px] bg-yellow-500/10 blur-3xl rounded-full" />
@@ -31,7 +31,7 @@ const BrandIntroSection = () => {
             />
           </div>
 
-          {/* ===== RIGHT — MINIMAL CONTENT ===== */}
+          {/* ===== RIGHT- MINIMAL CONTENT ===== */}
           <div className="md:col-span-7 text-left">
 
             <motion.p
@@ -66,7 +66,7 @@ const BrandIntroSection = () => {
             >
               A unified ecosystem of elite entertainment,
               premium dining, immersive gaming, and global
-              education — built on ambition, precision, and excellence.
+              education- built on ambition, precision, and excellence.
             </motion.p>
 
             <div className="flex gap-6">

@@ -5,7 +5,6 @@ import Navbar from "@/components/Navbar";
 import FooterSection from "@/components/FooterSection";
 
 const ContactPage = () => {
-
   const [success, setSuccess] = useState(false);
 
   const handleSubmit = async (e) => {
@@ -54,91 +53,111 @@ const ContactPage = () => {
         </p>
       </section>
 
-      {/* ================= CONTACT CARDS ================= */}
-      <section className="py-20 container mx-auto px-6 max-w-6xl">
-        <div className="grid md:grid-cols-3 gap-10">
-          <div className="bg-blue-900/20 p-8 rounded-3xl border border-yellow-400/20 text-center">
-            <Mail className="mx-auto mb-4 text-yellow-400" size={32} />
-            <h3 className="text-xl font-semibold mb-2">Email</h3>
-            <p className="text-gray-400">info@kenseigroups.com</p>
-          </div>
-
-          <div className="bg-blue-900/20 p-8 rounded-3xl border border-yellow-400/20 text-center">
-            <Phone className="mx-auto mb-4 text-yellow-400" size={32} />
-            <h3 className="text-xl font-semibold mb-2">Phone</h3>
-            <p className="text-gray-400">+91 8 124 123 000</p>
-          </div>
-
-          <div className="bg-blue-900/20 p-8 rounded-3xl border border-yellow-400/20 text-center">
-            <MapPin className="mx-auto mb-4 text-yellow-400" size={32} />
-            <h3 className="text-xl font-semibold mb-2">Location</h3>
-            <p className="text-gray-400">Chennai Tamilnadu India</p>
-          </div>
-        </div>
-      </section>
-
-      {/* ================= FORM ================= */}
-      <section className="pb-28 container mx-auto px-6 max-w-4xl">
-        <div className="bg-blue-900/20 p-10 rounded-3xl border border-yellow-400/20">
-          <h2 className="text-3xl font-bold mb-8 text-yellow-400 text-center">
-            Send Us a Message
-          </h2>
-
-          {success && (
-            <p className="text-center text-green-400 mb-6 font-semibold">
-              ✅ Thank you! Our team will contact you soon.
+      {/* ================= CONTACT LAYOUT ================= */}
+      <section className="pb-28 container mx-auto px-6 max-w-6xl">
+        <div className="grid lg:grid-cols-[1.1fr_1.4fr] gap-10 items-stretch">
+          <div className="bg-blue-900/10 border border-yellow-400/20 rounded-3xl p-10">
+            <h2 className="text-3xl font-bold text-yellow-400 mb-6">
+              Get in Touch
+            </h2>
+            <p className="text-gray-400 leading-relaxed mb-10">
+              Have a question or a partnership idea? Reach us directly and we
+              will get back to you quickly.
             </p>
-          )}
 
-          <form
-            onSubmit={handleSubmit}
-            className="grid md:grid-cols-2 gap-6"
-          >
-            <input
-              type="text"
-              name="name"
-              placeholder="Full Name"
-              required
-              className="bg-black/60 border border-gray-700 rounded-lg px-4 py-3 text-white placeholder:text-gray-500 focus:outline-none focus:border-yellow-400"
-            />
+            <div className="space-y-6">
+              <div className="flex items-start gap-4">
+                <div className="h-12 w-12 rounded-2xl bg-blue-900/30 border border-yellow-400/20 flex items-center justify-center">
+                  <MapPin className="text-yellow-400" size={22} />
+                </div>
+                <div className="text-left">
+                  <h3 className="text-lg font-semibold">Location</h3>
+                  <p className="text-gray-400">Chennai, Tamilnadu, India</p>
+                </div>
+              </div>
 
-            <input
-              type="email"
-              name="email"
-              placeholder="Email Address"
-              required
-              className="bg-black/60 border border-gray-700 rounded-lg px-4 py-3 text-white placeholder:text-gray-500 focus:outline-none focus:border-yellow-400"
-            />
+              <div className="flex items-start gap-4">
+                <div className="h-12 w-12 rounded-2xl bg-blue-900/30 border border-yellow-400/20 flex items-center justify-center">
+                  <Phone className="text-yellow-400" size={22} />
+                </div>
+                <div className="text-left">
+                  <h3 className="text-lg font-semibold">Contact</h3>
+                  <p className="text-gray-400">+91 8 124 123 000</p>
+                </div>
+              </div>
 
-            <input
-              type="text"
-              name="subject"
-              placeholder="Subject"
-              className="bg-black/60 border border-gray-700 rounded-lg px-4 py-3 text-white placeholder:text-gray-500 focus:outline-none focus:border-yellow-400 md:col-span-2"
-            />
-
-            <textarea
-              name="message"
-              placeholder="Your Message"
-              rows={6}
-              required
-              className="bg-black/60 border border-gray-700 rounded-lg px-4 py-3 text-white placeholder:text-gray-500 focus:outline-none focus:border-yellow-400 md:col-span-2"
-            />
-
-            <div className="md:col-span-2 text-center">
-              <button
-                type="submit"
-                className="px-6 py-3 rounded-lg text-sm font-semibold
-                           bg-blue-900 text-white
-                           hover:bg-blue-800
-                           hover:shadow-[0_0_15px_rgba(255,215,0,0.6)]
-                           transition-all duration-300"
-              >
-                Send Message
-              </button>
+              <div className="flex items-start gap-4">
+                <div className="h-12 w-12 rounded-2xl bg-blue-900/30 border border-yellow-400/20 flex items-center justify-center">
+                  <Mail className="text-yellow-400" size={22} />
+                </div>
+                <div className="text-left">
+                  <h3 className="text-lg font-semibold">Email</h3>
+                  <p className="text-gray-400">info@kenseifnbgroup.com</p>
+                </div>
+              </div>
             </div>
-          </form>
+          </div>
 
+          <div className="bg-blue-900/20 p-10 rounded-3xl border border-yellow-400/20">
+            <h2 className="text-3xl font-bold mb-8 text-yellow-400">
+              Send Us a Message
+            </h2>
+
+            {success && (
+              <p className="text-green-400 mb-6 font-semibold">
+                Success! Our team will contact you soon.
+              </p>
+            )}
+
+            <form
+              onSubmit={handleSubmit}
+              className="grid md:grid-cols-2 gap-6"
+            >
+              <input
+                type="text"
+                name="name"
+                placeholder="Full Name"
+                required
+                className="bg-black/60 border border-gray-700 rounded-lg px-4 py-3 text-white placeholder:text-gray-500 focus:outline-none focus:border-yellow-400"
+              />
+
+              <input
+                type="email"
+                name="email"
+                placeholder="Email Address"
+                required
+                className="bg-black/60 border border-gray-700 rounded-lg px-4 py-3 text-white placeholder:text-gray-500 focus:outline-none focus:border-yellow-400"
+              />
+
+              <input
+                type="text"
+                name="subject"
+                placeholder="Subject"
+                className="bg-black/60 border border-gray-700 rounded-lg px-4 py-3 text-white placeholder:text-gray-500 focus:outline-none focus:border-yellow-400 md:col-span-2"
+              />
+
+              <textarea
+                name="message"
+                placeholder="Your Message"
+                rows={6}
+                required
+                className="bg-black/60 border border-gray-700 rounded-lg px-4 py-3 text-white placeholder:text-gray-500 focus:outline-none focus:border-yellow-400 md:col-span-2"
+              />
+
+              <div className="md:col-span-2">
+                <button
+                  type="submit"
+                  className="w-full px-6 py-3 rounded-lg text-sm font-semibold
+                             bg-blue-900 text-white
+                             hover:bg-blue-800
+                             hover:shadow-[0_0_15px_rgba(255,215,0,0.6)]
+                             transition-all duration-300"
+                >
+                  Send Message
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
       </section>
 

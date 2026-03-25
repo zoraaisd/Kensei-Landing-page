@@ -86,15 +86,15 @@ const HeroSection = () => {
     >
       {/* IMAGE */}
       <div className="absolute inset-0">
-        <AnimatePresence mode="wait">
+        <AnimatePresence mode="sync" initial={false}>
           <motion.img
             key={index}
             src={slides[index].image}
-            initial={{ opacity: 0, scale: 1.08 }}
-            animate={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 1.5, ease: "easeInOut" }}
-            className="absolute inset-0 w-full h-full object-cover"
+            transition={{ duration: 0.6, ease: "linear" }}
+            className="absolute inset-0 w-full h-full object-cover will-change-opacity"
           />
         </AnimatePresence>
 

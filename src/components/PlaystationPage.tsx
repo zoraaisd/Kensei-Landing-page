@@ -92,11 +92,11 @@ const PlaystationPage = () => {
 
             {/* Minimal Stats */}
             <div className="flex gap-16 mb-12">
-              <div>
+              <div className="rounded-2xl border border-white/10 bg-white/5 px-6 py-4 backdrop-blur-md">
                 <h3 className="text-3xl font-bold text-red-500">30+</h3>
                 <p className="text-gray-400 text-sm">Top Games</p>
               </div>
-              <div>
+              <div className="rounded-2xl border border-white/10 bg-white/5 px-6 py-4 backdrop-blur-md">
                 <h3 className="text-3xl font-bold text-red-500">24/7</h3>
                 <p className="text-gray-400 text-sm">Gaming Access</p>
               </div>
@@ -104,7 +104,7 @@ const PlaystationPage = () => {
 
             {/* CTA */}
             <motion.a
-              href="https://147-snooker.netlify.app/"
+              href="https://147-snooker.netlify.app/booking?type=SNOOKER&id=SNOOKER"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}

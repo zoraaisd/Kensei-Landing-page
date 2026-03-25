@@ -1,4 +1,4 @@
-# 🏆 Kensei Groups — Elite Experiences Platform
+# 🏆 Kensei Groups- Elite Experiences Platform
 
 A premium multi-venture digital platform representing **Kensei Groups**, a lifestyle ecosystem redefining excellence across:
 

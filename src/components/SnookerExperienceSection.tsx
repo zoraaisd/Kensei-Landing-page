@@ -48,7 +48,7 @@ const SnookerExperienceSection = () => {
             {/* Description (shortened) */}
             <p className="text-gray-400 text-lg leading-relaxed max-w-xl mb-12">
               A refined snooker arena built with tournament precision,
-              focused lighting, and championship-grade tables —
+              focused lighting, and championship-grade tables-
               designed for players who demand mastery.
             </p>
 
@@ -77,12 +77,12 @@ const SnookerExperienceSection = () => {
 
             {/* Minimal Stats */}
             <div className="flex gap-20 mb-14">
-              <div>
+              <div className="rounded-2xl border border-white/10 bg-white/5 px-6 py-4 backdrop-blur-md">
                 <h3 className="text-3xl font-bold text-emerald-400">12+</h3>
                 <p className="text-gray-500 text-sm">Premium Tables</p>
               </div>
 
-              <div>
+              <div className="rounded-2xl border border-white/10 bg-white/5 px-6 py-4 backdrop-blur-md">
                 <h3 className="text-3xl font-bold text-emerald-400">500+</h3>
                 <p className="text-gray-500 text-sm">Elite Players</p>
               </div>
@@ -90,7 +90,7 @@ const SnookerExperienceSection = () => {
 
             {/* CTA */}
             <motion.a
-              href="https://147-snooker.netlify.app/"
+              href="https://147-snooker.netlify.app/booking?type=SNOOKER&id=SNOOKER"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
