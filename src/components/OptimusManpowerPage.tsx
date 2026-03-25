@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import optmanLogo from "@/assets/opt-glob-trans.png";
+import optmanLogo from "@/assets/opt-glob-trans.webp";
 
 const OptimusManpowerPage = () => {
   return (

@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
 import snookerLogo from "@/assets/snookers-logo.webp";
 import gameLogo from "@/assets/Gow-logo.webp";
-import dipLogo from "@/assets/dipdash-og-logo.png";
+import dipLogo from "@/assets/dipdash-og-logo.webp";
 import optimusLogo from "@/assets/opt-logo.webp";
-import zoralogo from "@/assets/Zora Icon.png";
-import manpowerLogo from "@/assets/opt-glob-trans.png";
+import zoralogo from "@/assets/Zora Icon.webp";
+import manpowerLogo from "@/assets/opt-glob-trans.webp";
 
 const BrandsSection = () => {
   const subBrands = [

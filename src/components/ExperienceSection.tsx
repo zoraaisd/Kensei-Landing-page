@@ -2,11 +2,11 @@ import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import gsap from "gsap";
 
-import snookerLogo from "@/assets/snooker-logo.png";
-import gameLogo from "@/assets/ps logo.png";
-import dipLogo from "@/assets/Dip & Dash.png";
-import optimusLogo from "@/assets/optimus-logo.png";
-import kenseiLogo from "@/assets/Kensei-logo.png";
+import snookerLogo from "@/assets/snooker-logo.webp";
+import gameLogo from "@/assets/ps logo.webp";
+import dipLogo from "@/assets/Dip & Dash.webp";
+import optimusLogo from "@/assets/optimus-logo.webp";
+import kenseiLogo from "@/assets/Kensei-logo.webp";
 
 const experiences = [
   { logo: snookerLogo, label: "Snookers", path: "/snookers" },

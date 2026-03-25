@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Target, Lightbulb } from "lucide-react";
-import vision from "@/assets/vision 1.jpg";
-import mission from "@/assets/mission 1.jpg";
+import vision from "@/assets/vision 1.webp";
+import mission from "@/assets/mission 1.webp";
 
 const MissionVisionSection = () => {
   return (

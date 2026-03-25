@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import dipdashLogo from "@/assets/dipdash-og-logo.png";
+import dipdashLogo from "@/assets/dipdash-og-logo.webp";
 
 const DipDashPage = () => {
   return (
