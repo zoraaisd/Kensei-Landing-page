@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import snookerLogo from "@/assets/New1 snookers-logo.webp";
+import BlurText from "@/components/ui/BlurText";
 
 const SnookerExperienceSection = () => {
   return (
@@ -24,7 +25,13 @@ const SnookerExperienceSection = () => {
                drop-shadow-[0_0_80px_rgba(16,185,129,0.5)]"
               initial={{ opacity: 0, x: -60 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1 }}
+              animate={{ y: [0, -30, 0], rotateZ: [-2, 2, -2] }}
+              transition={{ 
+                opacity: { duration: 1 },
+                x: { duration: 1 },
+                y: { duration: 4, repeat: Infinity, ease: "easeInOut" },
+                rotateZ: { duration: 5, repeat: Infinity, ease: "easeInOut" }
+              }}
               viewport={{ once: true }}
             />
 
@@ -38,12 +45,13 @@ const SnookerExperienceSection = () => {
           <div className="md:col-span-7 text-left">
 
             {/* Heading */}
-            <h2
-              className="text-4xl md:text-5xl font-bold mb-8 text-white leading-tight"
-              style={{ fontFamily: "Playfair Display, serif" }}
-            >
-              Crafted for <span className="text-emerald-400">Champions</span>
-            </h2>
+            <BlurText
+              text="Crafted for Champions"
+              delay={100}
+              className="text-4xl md:text-5xl font-bold mb-8 leading-tight bg-gradient-to-r from-emerald-400 via-green-400 to-emerald-400 bg-clip-text text-transparent"
+              animateBy="words"
+              direction="bottom"
+            />
 
             {/* Description (shortened) */}
             <p className="text-gray-400 text-lg leading-relaxed max-w-xl mb-12">

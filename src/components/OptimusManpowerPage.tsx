@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import optmanLogo from "@/assets/opt-glob-trans.webp";
+import optmanLogo from "@/assets/Logo1.webp";
+import BlurText from "@/components/ui/BlurText";
 
 const OptimusManpowerPage = () => {
   return (
@@ -27,7 +28,13 @@ const OptimusManpowerPage = () => {
                          drop-shadow-[0_0_80px_rgba(209,213,219,0.5)]"
               initial={{ opacity: 0, x: -60 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1 }}
+              animate={{ y: [0, -28, 0], rotateZ: [-2, 2, -2] }}
+              transition={{ 
+                opacity: { duration: 1 },
+                x: { duration: 1 },
+                y: { duration: 4, repeat: Infinity, ease: "easeInOut" },
+                rotateZ: { duration: 5.5, repeat: Infinity, ease: "easeInOut" }
+              }}
               viewport={{ once: true }}
             />
 
@@ -40,15 +47,13 @@ const OptimusManpowerPage = () => {
           <div className="md:col-span-7 text-left">
 
             {/* Heading */}
-            <h2
-              className="text-4xl md:text-5xl font-bold mb-8 leading-tight
-                         bg-gradient-to-r from-gray-300 via-white to-gray-400
-                         bg-clip-text text-transparent"
-              style={{ fontFamily: "Playfair Display, serif" }}
-            >
-              Expert Talent. <br />
-              <span className="text-gray-300">Proven Results.</span>
-            </h2>
+            <BlurText
+              text="Expert Talent. Proven Results."
+              delay={100}
+              className="text-4xl md:text-5xl font-bold mb-8 leading-tight bg-gradient-to-r from-gray-300 via-white to-gray-400 bg-clip-text text-transparent"
+              animateBy="words"
+              direction="bottom"
+            />
 
             {/* Description (Shortened) */}
             <p className="text-gray-400 text-lg leading-relaxed max-w-xl mb-12">

@@ -1,8 +1,12 @@
 import { motion } from "framer-motion";
 import { Gamepad2, MonitorPlay, Zap } from "lucide-react";
 import gameLogo from "@/assets/Gow-logo.webp";
+import BlurText from "@/components/ui/BlurText";
+import { useRef, useState } from "react";
 
 const PlaystationPage = () => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [isHovering, setIsHovering] = useState(false);
   return (
     <section
       id="playstation"
@@ -23,16 +27,55 @@ const PlaystationPage = () => {
             {/* Glow */}
             <div className="absolute w-[480px] h-[480px] bg-red-600/20 blur-3xl rounded-full" />
 
-            <motion.img
-              src={gameLogo}
-              alt="Game Of War"
-              className="relative w-80 md:w-[420px] object-contain
-               drop-shadow-[0_0_80px_rgba(255,0,0,0.6)]"
+            {/* Logo & Video Container - Circular */}
+            <motion.div
+              className="relative w-80 cursor-pointer aspect-square md:w-[420px]"
               initial={{ opacity: 0, x: -60 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1 }}
+              transition={{
+                opacity: { duration: 1 },
+                x: { duration: 1 },
+              }}
               viewport={{ once: true }}
-            />
+              onMouseEnter={() => {
+                setIsHovering(true);
+                if (videoRef.current) {
+                  videoRef.current.currentTime = 0;
+                  void videoRef.current.play();
+                }
+              }}
+              onMouseLeave={() => {
+                setIsHovering(false);
+                if (videoRef.current) {
+                  videoRef.current.pause();
+                  videoRef.current.currentTime = 0;
+                }
+              }}
+            >
+              {/* Clean Circular Container */}
+              <div className="relative h-full w-full overflow-hidden rounded-full border-4 border-white/95 bg-white">
+                {/* Video - Behind */}
+                <video
+                  ref={videoRef}
+                  src={new URL("../assets/gow/PS.webm", import.meta.url).href}
+                  className={`absolute inset-0 h-full w-full object-cover pointer-events-none transition-opacity duration-500 ${
+                    isHovering ? "opacity-100" : "opacity-0"
+                  }`}
+                  muted
+                  loop
+                  playsInline
+                />
+
+                {/* Logo - On Top, Fades on Hover */}
+                <motion.img
+                  src={gameLogo}
+                  alt="Game Of War"
+                  className={`absolute inset-0 h-full w-full object-contain transition-opacity duration-500 ${
+                    isHovering ? "opacity-0" : "opacity-100"
+                  }`}
+                />
+              </div>
+            </motion.div>
 
             <p className="mt-8 text-red-400 tracking-widest uppercase text-xs">
               Next-Gen Console Arena
@@ -43,12 +86,13 @@ const PlaystationPage = () => {
           {/* ================= RIGHT 60% ================= */}
           <div className="md:col-span-7 text-left">
 
-            <h1
-              className="text-5xl md:text-6xl font-bold mb-6 text-white leading-tight"
-              style={{ fontFamily: "Playfair Display, serif" }}
-            >
-              Enter The <span className="text-red-500">Arena</span>
-            </h1>
+            <BlurText
+              text="Enter The Arena"
+              delay={100}
+              className="text-5xl md:text-6xl font-bold mb-6 leading-tight bg-gradient-to-r from-red-500 via-pink-500 to-red-500 bg-clip-text text-transparent"
+              animateBy="words"
+              direction="bottom"
+            />
 
             <p className="text-gray-400 text-lg leading-relaxed max-w-xl mb-10">
               Relive legendary classics and dominate next-gen multiplayer

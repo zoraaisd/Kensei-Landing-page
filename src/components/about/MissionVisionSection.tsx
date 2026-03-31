@@ -2,6 +2,8 @@ import { motion } from "framer-motion";
 import { Target, Lightbulb } from "lucide-react";
 import vision from "@/assets/vision 1.webp";
 import mission from "@/assets/mission 1.webp";
+import missionVideo from "@/assets/video/mission-video.webm";
+import visionVideo from "@/assets/video/vission-video.webm";
 
 const MissionVisionSection = () => {
   return (
@@ -12,7 +14,7 @@ const MissionVisionSection = () => {
           <div className="grid md:grid-cols-2 gap-16 items-center">
             {/* Left - Image */}
             <motion.div
-              className="relative h-96 md:h-full rounded-2xl overflow-hidden shadow-2xl"
+              className="group relative h-96 md:h-full rounded-2xl overflow-hidden shadow-2xl"
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
@@ -21,7 +23,16 @@ const MissionVisionSection = () => {
               <img
                 src={mission}
                 alt="Our Mission"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0"
+              />
+              <video
+                src={missionVideo}
+                className="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="metadata"
               />
               <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent"></div>
             </motion.div>
@@ -129,7 +140,7 @@ const MissionVisionSection = () => {
 
             {/* Right - Image */}
             <motion.div
-              className="relative h-96 md:h-full rounded-2xl overflow-hidden shadow-2xl order-1 md:order-2"
+              className="group relative h-96 md:h-full rounded-2xl overflow-hidden shadow-2xl order-1 md:order-2"
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
@@ -138,7 +149,16 @@ const MissionVisionSection = () => {
               <img
                 src={vision}
                 alt="Our Vision"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0"
+              />
+              <video
+                src={visionVideo}
+                className="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="metadata"
               />
               <div className="absolute inset-0 bg-gradient-to-l from-blue-950/60 to-transparent"></div>
             </motion.div>

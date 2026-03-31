@@ -58,15 +58,15 @@ const OptimusManpowerCard = () => {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,rgba(209,213,219,0.12),transparent_60%)]" />
 
       {/* ===== Content Left Aligned ===== */}
-      <div className="relative z-10 container mx-auto px-8 lg:px-20 max-w-6xl">
-
-        <motion.div
-          initial={{ opacity: 0, y: 60 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          viewport={{ once: true }}
-          className="max-w-2xl"
-        >
+      <div className="relative z-10 w-full">
+        <div className="px-8 lg:px-16 max-w-7xl">
+          <motion.div
+            initial={{ opacity: 0, y: 60 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+            className="max-w-2xl text-left"
+          >
 
           {/* Small Tagline */}
           <p className="text-gray-300 uppercase tracking-widest text-sm mb-4">
@@ -127,6 +127,7 @@ const OptimusManpowerCard = () => {
 
           </div>
         </motion.div>
+        </div>
       </div>
 
       {/* Slide Indicators */}

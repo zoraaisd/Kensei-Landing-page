@@ -20,10 +20,10 @@ const Index = () => (
     <BrandIntroSection />
       <SnookersCard />
           <SnookerExperienceSection/>
-          <PlaystationCard />
-          <PlaystationPage/>
           <DipDashCard />
           <DipDashPage/>
+          <PlaystationCard />
+          <PlaystationPage/>
           <OptimusCard />
           <OptimusCourses/>
           <OptimusManpowerCard />

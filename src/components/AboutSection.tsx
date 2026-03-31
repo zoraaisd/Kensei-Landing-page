@@ -4,7 +4,6 @@ import HeroSection from "./about/HeroSection";
 import WhyChooseUsSection from "./about/WhyChooseUsSection";
 import MissionVisionSection from "./about/MissionVisionSection";
 import CompanyTimelineSection from "./about/CompanyTimelineSection";
-import FinancialPerformanceSection from "./about/FinancialPerformanceSection";
 import LeadershipSection from "./about/LeadershipSection";
 import BrandsSection from "./about/BrandsSection";
 
@@ -16,7 +15,6 @@ const AboutPage = () => {
       <WhyChooseUsSection />
       <MissionVisionSection />
       <CompanyTimelineSection />
-      <FinancialPerformanceSection />
       <LeadershipSection />
       <BrandsSection />
       <FooterSection />

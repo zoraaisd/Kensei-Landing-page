@@ -34,7 +34,13 @@ const OptimusCourses = () => {
                          drop-shadow-[0_0_80px_rgba(59,130,246,0.6)]"
               initial={{ opacity: 0, x: -60 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1 }}
+              animate={{ y: [0, -32, 0], rotateZ: [-2, 2, -2] }}
+              transition={{ 
+                opacity: { duration: 1 },
+                x: { duration: 1 },
+                y: { duration: 4.2, repeat: Infinity, ease: "easeInOut" },
+                rotateZ: { duration: 5.5, repeat: Infinity, ease: "easeInOut" }
+              }}
               viewport={{ once: true }}
             />
 
@@ -62,6 +68,15 @@ const OptimusCourses = () => {
             {/* Course List */}
             <div className="space-y-8">
 
+               <div>
+                <h3 className="text-xl font-semibold text-yellow-400 mb-2">
+                  MBBS in Global Health and Tropical Medicine
+                </h3>
+                <p className="text-gray-400">
+                  Comprehensive medical training with a focus on global health challenges.
+                </p>
+              </div>
+
               <div>
                 <h3 className="text-xl font-semibold text-yellow-400 mb-2">
                   MSc in Environmental Data Analytics
@@ -80,14 +95,7 @@ const OptimusCourses = () => {
                 </p>
               </div>
 
-              <div>
-                <h3 className="text-xl font-semibold text-yellow-400 mb-2">
-                  LLM in International Commercial Dispute Resolution
-                </h3>
-                <p className="text-gray-400">
-                  Arbitration and cross-border legal frameworks.
-                </p>
-              </div>
+             
               {/* Apply Button */}
               <motion.a
                 href="https://www.optimusoverseasedu.com/courses"
