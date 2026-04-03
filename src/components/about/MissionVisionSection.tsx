@@ -56,21 +56,21 @@ const MissionVisionSection = () => {
 
               <div className="space-y-6">
                 <p className="text-xl text-gray-300 leading-relaxed font-semibold">
-                  To deliver transformative experiences across entertainment, dining, and education- empowering individuals to pursue excellence and unlock their true potential.
+                  To deliver transformative experiences across entertainment, dining and education- empowering individuals to pursue excellence and unlock their true potential.
                 </p>
 
                 <div className="space-y-4">
                   <div className="p-6 rounded-xl bg-blue-900/30 border border-yellow-400/20 hover:border-yellow-400/50 transition-all duration-300">
                     <h4 className="text-yellow-400 font-bold mb-2 text-lg">Our Core Commitment</h4>
                     <p className="text-gray-300 leading-relaxed">
-                      We are committed to creating premium yet accessible platforms where communities thrive, talents flourish, and dreams become reality.
+                      We are committed to creating premium yet accessible platforms where communities thrive, talents flourish and dreams become reality.
                     </p>
                   </div>
 
                   <div className="p-6 rounded-xl bg-blue-900/30 border border-yellow-400/20 hover:border-yellow-400/50 transition-all duration-300">
                     <h4 className="text-yellow-400 font-bold mb-2 text-lg">Precision & Excellence</h4>
                     <p className="text-gray-300 leading-relaxed">
-                      Every venture is designed with meticulous precision to exceed expectations, inspire continuous growth, and set new industry standards.
+                      Every venture is designed with meticulous precision to exceed expectations, inspire continuous growth and set new industry standards.
                     </p>
                   </div>
 
@@ -110,7 +110,7 @@ const MissionVisionSection = () => {
 
               <div className="space-y-6">
                 <p className="text-xl text-gray-300 leading-relaxed font-semibold">
-                  To become a globally recognized lifestyle group celebrated for innovation, excellence, and transformative multi-industry impact worldwide.
+                  To become a globally recognized lifestyle group celebrated for innovation, excellence and transformative multi-industry impact worldwide.
                 </p>
 
                 <div className="space-y-4">
@@ -124,7 +124,7 @@ const MissionVisionSection = () => {
                   <div className="p-6 rounded-xl bg-blue-900/30 border border-yellow-400/20 hover:border-yellow-400/50 transition-all duration-300">
                     <h4 className="text-yellow-400 font-bold mb-2 text-lg">Strategic Expansion</h4>
                     <p className="text-gray-300 leading-relaxed">
-                      Through strategic expansion and innovative ventures, we'll redefine entertainment, dining, gaming, and education landscapes globally.
+                      Through strategic expansion and innovative ventures, we'll redefine entertainment, dining, gaming and education landscapes globally.
                     </p>
                   </div>
 

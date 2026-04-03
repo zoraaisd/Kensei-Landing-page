@@ -90,7 +90,7 @@ const OptimusManpowerCard = () => {
           <p className="text-gray-300 text-lg leading-relaxed mb-8">
             Optimus Manpower is your strategic partner in building world-class teams.
             We connect exceptional talent with leading organizations, delivering
-            comprehensive HR solutions that drive growth, innovation, and sustained success.
+            comprehensive HR solutions that drive growth, innovation and sustained success.
           </p>
 
           {/* Buttons */}

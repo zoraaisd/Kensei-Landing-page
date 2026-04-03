@@ -54,9 +54,9 @@ const SnookerExperienceSection = () => {
             />
 
             {/* Description (shortened) */}
-            <p className="text-gray-400 text-lg leading-relaxed max-w-xl mb-12">
+            <p className="text-white/90 text-lg leading-relaxed max-w-xl mb-12">
               A refined snooker arena built with tournament precision,
-              focused lighting, and championship-grade tables-
+              focused lighting and championship-grade tables-
               designed for players who demand mastery.
             </p>
 
@@ -67,7 +67,7 @@ const SnookerExperienceSection = () => {
                 <h4 className="text-emerald-400 font-semibold mb-2">
                   Professional Tables
                 </h4>
-                <p className="text-sm text-gray-400">
+                <p className="text-sm text-white/90">
                   Calibrated surfaces for consistent precision and control.
                 </p>
               </div>
@@ -76,7 +76,7 @@ const SnookerExperienceSection = () => {
                 <h4 className="text-emerald-400 font-semibold mb-2">
                   Championship Lighting
                 </h4>
-                <p className="text-sm text-gray-400">
+                <p className="text-sm text-white/90">
                   Glare-free focused illumination built for elite gameplay.
                 </p>
               </div>
@@ -87,12 +87,12 @@ const SnookerExperienceSection = () => {
             <div className="flex gap-20 mb-14">
               <div className="rounded-2xl border border-white/10 bg-white/5 px-6 py-4 backdrop-blur-md">
                 <h3 className="text-3xl font-bold text-emerald-400">12+</h3>
-                <p className="text-gray-500 text-sm">Premium Tables</p>
+                <p className="text-white/90 text-sm">Premium Tables</p>
               </div>
 
               <div className="rounded-2xl border border-white/10 bg-white/5 px-6 py-4 backdrop-blur-md">
                 <h3 className="text-3xl font-bold text-emerald-400">500+</h3>
-                <p className="text-gray-500 text-sm">Elite Players</p>
+                <p className="text-white/90 text-sm">Elite Players</p>
               </div>
             </div>
 

@@ -66,7 +66,12 @@ const ContactPage = () => {
             </p>
 
             <div className="space-y-6">
-              <div className="flex items-start gap-4">
+              <a
+                href="https://www.google.com/maps?sca_esv=483bff7be855fde4&rlz=1C1GCEA_enIN1020IN1020&output=search&q=zora+global+ai&source=lnms&fbs=ADc_l-aN0CWEZBOHjofHoaMMDiKpaEWjvZ2Py1XXV8d8KvlI3ppPEReeCOS7s1VbbZz2TLt2sOibMbYx2XAHg-v8xM5VswWDsYo9WtqkvCRRg9-K9fJjsnjqytEoKTR4cUs6BEp5CqUJpkUZenO7_GJv-kXjXUHbDYKgguiqut1JwbRNkRFqw9i95SENYJAGcl8K0pwuMkOtbkrJ1I9-NNCyhQDP9i9JOg&entry=mc&ved=1t:200715&ictx=111"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-start gap-4 rounded-2xl transition-colors hover:text-yellow-400"
+              >
                 <div className="h-12 w-12 rounded-2xl bg-blue-900/30 border border-yellow-400/20 flex items-center justify-center">
                   <MapPin className="text-yellow-400" size={22} />
                 </div>
@@ -74,19 +79,27 @@ const ContactPage = () => {
                   <h3 className="text-lg font-semibold">Location</h3>
                   <p className="text-gray-400">Chennai, Tamilnadu, India</p>
                 </div>
-              </div>
+              </a>
 
-              <div className="flex items-start gap-4">
+              <a
+                href="tel:+918124123000"
+                className="flex items-start gap-4 rounded-2xl transition-colors hover:text-yellow-400"
+              >
                 <div className="h-12 w-12 rounded-2xl bg-blue-900/30 border border-yellow-400/20 flex items-center justify-center">
                   <Phone className="text-yellow-400" size={22} />
                 </div>
                 <div className="text-left">
                   <h3 className="text-lg font-semibold">Contact</h3>
-                  <p className="text-gray-400">+91 8 124 123 000</p>
+                  <p className="text-gray-400">+91 81241 23000</p>
                 </div>
-              </div>
+              </a>
 
-              <div className="flex items-start gap-4">
+              <a
+                href="https://mail.google.com/mail/?view=cm&to=info@kenseifnbgroup.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-start gap-4 rounded-2xl transition-colors hover:text-yellow-400"
+              >
                 <div className="h-12 w-12 rounded-2xl bg-blue-900/30 border border-yellow-400/20 flex items-center justify-center">
                   <Mail className="text-yellow-400" size={22} />
                 </div>
@@ -94,7 +107,7 @@ const ContactPage = () => {
                   <h3 className="text-lg font-semibold">Email</h3>
                   <p className="text-gray-400">info@kenseifnbgroup.com</p>
                 </div>
-              </div>
+              </a>
             </div>
           </div>
 

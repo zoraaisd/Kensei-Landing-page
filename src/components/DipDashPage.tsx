@@ -58,9 +58,9 @@ const DipDashPage = () => {
             />
 
             {/* Description (Shortened) */}
-            <p className="text-gray-400 text-lg leading-relaxed max-w-xl mb-12">
+            <p className="text-white/90 text-lg leading-relaxed max-w-xl mb-12">
               Dip & Dash delivers high-energy street food with signature
-              burgers, loaded fries, and unforgettable sauces-
+              burgers, loaded fries and unforgettable sauces-
               crafted for flavor lovers who crave impact.
             </p>
 
@@ -71,7 +71,7 @@ const DipDashPage = () => {
                 <h4 className="text-yellow-400 font-semibold mb-2">
                   Signature Loaded Burgers
                 </h4>
-                <p className="text-sm text-gray-400">
+                <p className="text-sm text-white/90">
                   Double stacks, molten cheese, bold sauces-
                   every bite hits different.
                 </p>
@@ -81,7 +81,7 @@ const DipDashPage = () => {
                 <h4 className="text-yellow-400 font-semibold mb-2">
                   Fully Loaded Fries
                 </h4>
-                <p className="text-sm text-gray-400">
+                <p className="text-sm text-white/90">
                   Crispy golden fries layered with rich toppings
                   and house-crafted blends.
                 </p>

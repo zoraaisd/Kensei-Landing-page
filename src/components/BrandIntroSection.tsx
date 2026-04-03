@@ -133,11 +133,11 @@ const BrandIntroSection = () => {
               whileInView={{ opacity: 1 }}
               transition={{ delay: 0.3, duration: 1 }}
               viewport={{ once: true }}
-              className="text-lg text-gray-400 leading-relaxed max-w-xl mb-10"
+              className="text-lg text-white/90 leading-relaxed max-w-xl mb-10"
             >
               A unified ecosystem of elite entertainment,
-              premium dining, immersive gaming, and global
-              education- built on ambition, precision, and excellence.
+              premium dining, immersive gaming and global
+              education- built on ambition, precision and excellence.
             </motion.p>
 
             <div className="flex gap-6">

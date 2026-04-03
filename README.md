@@ -18,7 +18,7 @@ A premium multi-venture digital platform representing **Kensei Groups**, a lifes
 
 ## 🚀 Project Overview
 
-Kensei Groups is a modern luxury brand ecosystem website built with performance, design precision, and immersive user experience in mind.
+Kensei Groups is a modern luxury brand ecosystem website built with performance, design precision and immersive user experience in mind.
 
 This platform showcases multiple ventures under a unified premium brand identity.
 

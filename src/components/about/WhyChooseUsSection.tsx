@@ -42,7 +42,7 @@ const WhyChooseUsSection = () => {
             <Target className="w-10 h-10 text-yellow-400 mb-4" />
             <h3 className="text-lg font-bold text-white mb-3">Diverse Portfolio</h3>
             <p className="text-gray-400 text-sm leading-relaxed">
-              Multi-industry presence spanning entertainment, dining, education, and manpower
+              Multi-industry presence spanning entertainment, dining, education and manpower
             </p>
           </motion.div>
 

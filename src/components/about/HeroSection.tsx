@@ -25,7 +25,7 @@ const HeroSection = () => {
 
       <p className="max-w-3xl mx-auto text-gray-400 text-lg leading-relaxed mb-8">
         A premium multi-venture lifestyle group redefining excellence across
-        entertainment, dining, and global education.
+        entertainment, dining and global education.
       </p>
 
       {/* Enhanced Kensei Groups Content */}
@@ -39,7 +39,7 @@ const HeroSection = () => {
           <Target className="w-8 h-8 text-yellow-400 mx-auto mb-3" />
           <h3 className="text-yellow-400 font-bold mb-2">Our Focus</h3>
           <p className="text-gray-400 text-sm">
-            Creating premium experiences through strategic ventures in entertainment, dining, and education
+            Creating premium experiences through strategic ventures in entertainment, dining and education
           </p>
         </motion.div>
 

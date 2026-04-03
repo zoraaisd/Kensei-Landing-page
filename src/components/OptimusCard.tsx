@@ -71,7 +71,7 @@ const OptimusCard = () => {
           </p>
 
           {/* Main Heading */}
-          <h1 className="text-5xl md:text-7xl font-extrabold leading-tight mb-6 text-white">
+          <h1 className="text-5xl md:text-7xl font-extrabold leading-tight mb-6 text-white" style={{ fontFamily: "Playfair Display, serif" }}>
             Study Beyond
             <span className="block bg-gradient-to-r from-blue-300 via-yellow-400 to-blue-400 bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(59,130,246,0.6)]">
               Boundaries.
@@ -79,12 +79,12 @@ const OptimusCard = () => {
           </h1>
 
           {/* Quote */}
-          <p className="italic text-gray-300 mb-6">
+          <p className="italic text-white/90 mb-6">
             “Your global academic journey starts here.”
           </p>
 
           {/* Paragraph */}
-          <p className="text-gray-200 text-lg leading-relaxed mb-8">
+          <p className="text-white/90 text-lg leading-relaxed mb-8">
             Optimus Overseas empowers students to unlock international
             education opportunities with confidence and clarity.
             From personalized counseling to university admissions

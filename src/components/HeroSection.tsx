@@ -38,7 +38,7 @@ const slides: HeroSlide[] = [
     title: "Precision. Power. Prestige.",
     subtitle: "Snookers Lounge",
     description:
-      "Step into a championship arena crafted for focus, finesse, and elite competition.",
+      "Step into a championship arena crafted for focus, finesse and elite competition.",
     headingGradient:
       "from-emerald-300 via-emerald-400 to-teal-400",
     paragraphColor: "text-emerald-100/90",
@@ -68,7 +68,7 @@ const slides: HeroSlide[] = [
     title: "Bold Flavors. Elevated Taste.",
     subtitle: "Dip & Dash",
     description:
-      "Signature burgers, loaded fries, and high-energy dining designed to excite every bite.",
+      "Signature burgers, loaded fries and high-energy dining designed to excite every bite.",
     headingGradient:
       "from-orange-400 via-red-500 to-yellow-400",
     paragraphColor: "text-orange-100/90",

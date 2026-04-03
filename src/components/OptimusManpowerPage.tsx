@@ -38,7 +38,7 @@ const OptimusManpowerPage = () => {
               viewport={{ once: true }}
             />
 
-            <p className="mt-8 text-gray-300 tracking-widest uppercase text-xs">
+            <p className="mt-8 text-white/90 tracking-widest uppercase text-xs">
               Global HR Solutions
             </p>
           </div>
@@ -56,9 +56,9 @@ const OptimusManpowerPage = () => {
             />
 
             {/* Description (Shortened) */}
-            <p className="text-gray-400 text-lg leading-relaxed max-w-xl mb-12">
+            <p className="text-white/90 text-lg leading-relaxed max-w-xl mb-12">
               Optimus Manpower delivers strategic workforce solutions with
-              precision staffing, talent acquisition, and HR consulting-
+              precision staffing, talent acquisition and HR consulting-
               designed for organizations that demand excellence.
             </p>
 
@@ -66,21 +66,21 @@ const OptimusManpowerPage = () => {
             <div className="space-y-8 mb-14">
 
               <div>
-                <h4 className="text-gray-200 font-semibold mb-2">
+                <h4 className="text-white/90 font-semibold mb-2">
                   Talent Acquisition & Recruitment
                 </h4>
-                <p className="text-sm text-gray-400">
+                <p className="text-sm text-white/90">
                   Strategic sourcing and placement of top-tier professionals
                   across industries and geographies.
                 </p>
               </div>
 
               <div>
-                <h4 className="text-gray-200 font-semibold mb-2">
+                <h4 className="text-white/90 font-semibold mb-2">
                   HR Consulting & Solutions
                 </h4>
-                <p className="text-sm text-gray-400">
-                  Comprehensive workforce planning, compliance, and organizational
+                <p className="text-sm text-white/90">
+                  Comprehensive workforce planning, compliance and organizational
                   development strategies.
                 </p>
               </div>
@@ -90,13 +90,13 @@ const OptimusManpowerPage = () => {
             {/* Minimal Stats */}
             <div className="flex gap-20 mb-14">
               <div className="rounded-2xl border border-white/10 bg-white/5 px-6 py-4 backdrop-blur-md">
-                <h3 className="text-3xl font-bold text-gray-300">500+</h3>
-                <p className="text-gray-500 text-sm">Placements Yearly</p>
+                <h3 className="text-3xl font-bold text-white/90">500+</h3>
+                <p className="text-white/90 text-sm">Placements Yearly</p>
               </div>
 
               <div className="rounded-2xl border border-white/10 bg-white/5 px-6 py-4 backdrop-blur-md">
-                <h3 className="text-3xl font-bold text-gray-300">50+</h3>
-                <p className="text-gray-500 text-sm">Industry Partners</p>
+                <h3 className="text-3xl font-bold text-white/90">50+</h3>
+                <p className="text-white/90 text-sm">Industry Partners</p>
               </div>
             </div>
 

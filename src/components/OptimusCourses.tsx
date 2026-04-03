@@ -54,13 +54,13 @@ const OptimusCourses = () => {
               className="text-4xl md:text-5xl font-bold leading-tight mb-6
                          bg-gradient-to-r from-blue-300 via-yellow-400 to-blue-400
                          bg-clip-text text-transparent"
-              style={{ fontFamily: "Playfair Display, serif" }}
+              
             >
               Global Academic Excellence
             </h2>
 
             {/* Description */}
-            <p className="text-gray-400 leading-relaxed mb-10 max-w-xl">
+            <p className="text-white/90 leading-relaxed mb-10 max-w-xl">
               Empowering ambitious students with internationally recognized
               postgraduate programs designed for global impact and leadership.
             </p>
@@ -72,7 +72,7 @@ const OptimusCourses = () => {
                 <h3 className="text-xl font-semibold text-yellow-400 mb-2">
                   MBBS in Global Health and Tropical Medicine
                 </h3>
-                <p className="text-gray-400">
+                <p className="text-white/90">
                   Comprehensive medical training with a focus on global health challenges.
                 </p>
               </div>
@@ -81,7 +81,7 @@ const OptimusCourses = () => {
                 <h3 className="text-xl font-semibold text-yellow-400 mb-2">
                   MSc in Environmental Data Analytics
                 </h3>
-                <p className="text-gray-400">
+                <p className="text-white/90">
                   Predictive modeling and AI-driven environmental solutions.
                 </p>
               </div>
@@ -90,7 +90,7 @@ const OptimusCourses = () => {
                 <h3 className="text-xl font-semibold text-yellow-400 mb-2">
                   MA in Media, Culture and Society
                 </h3>
-                <p className="text-gray-400">
+                <p className="text-white/90">
                   Global media systems and digital cultural transformation.
                 </p>
               </div>

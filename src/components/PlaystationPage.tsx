@@ -94,7 +94,7 @@ const PlaystationPage = () => {
               direction="bottom"
             />
 
-            <p className="text-gray-400 text-lg leading-relaxed max-w-xl mb-10">
+            <p className="text-white/90 text-lg leading-relaxed max-w-xl mb-10">
               Relive legendary classics and dominate next-gen multiplayer
               battles in a competitive arena built for performance.
             </p>
@@ -107,7 +107,7 @@ const PlaystationPage = () => {
                 <h4 className="text-white font-semibold mb-1">
                   PS2 Classics
                 </h4>
-                <p className="text-gray-500 text-sm">
+                <p className="text-white/90 text-sm">
                   The golden era of gaming.
                 </p>
               </div>
@@ -117,7 +117,7 @@ const PlaystationPage = () => {
                 <h4 className="text-white font-semibold mb-1">
                   PS4 Competitive
                 </h4>
-                <p className="text-gray-500 text-sm">
+                <p className="text-white/90 text-sm">
                   Stunning visuals & multiplayer.
                 </p>
               </div>
@@ -127,7 +127,7 @@ const PlaystationPage = () => {
                 <h4 className="text-white font-semibold mb-1">
                   PS5 Power
                 </h4>
-                <p className="text-gray-500 text-sm">
+                <p className="text-white/90 text-sm">
                   Ultra-fast & immersive.
                 </p>
               </div>
@@ -138,11 +138,11 @@ const PlaystationPage = () => {
             <div className="flex gap-16 mb-12">
               <div className="rounded-2xl border border-white/10 bg-white/5 px-6 py-4 backdrop-blur-md">
                 <h3 className="text-3xl font-bold text-red-500">30+</h3>
-                <p className="text-gray-400 text-sm">Top Games</p>
+                <p className="text-white/90 text-sm">Top Games</p>
               </div>
               <div className="rounded-2xl border border-white/10 bg-white/5 px-6 py-4 backdrop-blur-md">
                 <h3 className="text-3xl font-bold text-red-500">24/7</h3>
-                <p className="text-gray-400 text-sm">Gaming Access</p>
+                <p className="text-white/90 text-sm">Gaming Access</p>
               </div>
             </div>
 

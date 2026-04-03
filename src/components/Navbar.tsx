@@ -22,8 +22,8 @@ const companyLinks = [
 const homeSectionGroups = [
   { href: "/", selector: "#home" },
   { href: "#snookers", selector: "#snookers" },
-  { href: "#gameofwar", selector: "#gameofwar" },
   { href: "#dipdash", selector: "#dipdash" },
+  { href: "#gameofwar", selector: "#gameofwar" },
   { href: "#optimus", selector: "#optimus" },
   { href: "#optimus-manpower", selector: "#optimus-manpower" },
 ];

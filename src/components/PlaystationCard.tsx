@@ -78,7 +78,7 @@ const PlaystationCard = () => {
             >
               From nostalgic console battles to cutting-edge PS5 adventures,
               our gaming zone delivers immersive 4K worlds, competitive
-              multiplayer action, and next-level performance.
+              multiplayer action and next-level performance.
             </motion.p>
 
             {/* Buttons */}
