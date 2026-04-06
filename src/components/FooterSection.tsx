@@ -151,6 +151,14 @@ const FooterSection = () => {
             </a>
 
             <a
+              href="tel:+918124123000"
+              className="flex items-center gap-2 hover:text-yellow-400 transition-colors"
+            >
+              <Phone size={14} className="text-yellow-600" />
+              <span>+91-044-4625 4744 </span>
+            </a>
+
+            <a
               href="https://mail.google.com/mail/?view=cm&to=info@kenseifnbgroup.com"
               target="_blank"
               rel="noopener noreferrer"

@@ -89,8 +89,21 @@ const ContactPage = () => {
                   <Phone className="text-yellow-400" size={22} />
                 </div>
                 <div className="text-left">
-                  <h3 className="text-lg font-semibold">Contact</h3>
+                  <h3 className="text-lg font-semibold">Mobile</h3>
                   <p className="text-gray-400">+91 81241 23000</p>
+                </div>
+              </a>
+
+              <a
+                href="tel:+918124123000"
+                className="flex items-start gap-4 rounded-2xl transition-colors hover:text-yellow-400"
+              >
+                <div className="h-12 w-12 rounded-2xl bg-blue-900/30 border border-yellow-400/20 flex items-center justify-center">
+                  <Phone className="text-yellow-400" size={22} />
+                </div>
+                <div className="text-left">
+                  <h3 className="text-lg font-semibold">Telephone</h3>
+                  <p className="text-gray-400">+91-044-4625 4744 </p>
                 </div>
               </a>
 
