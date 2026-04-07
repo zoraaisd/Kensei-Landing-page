@@ -1,16 +1,66 @@
 import { motion } from "framer-motion";
 import { Mail, Phone, MapPin } from "lucide-react";
-import { useState } from "react";
+import { ChangeEvent, FormEvent, useState } from "react";
 import Navbar from "@/components/Navbar";
 import FooterSection from "@/components/FooterSection";
 
+const NAME_REGEX = /^[A-Za-z]+(?: [A-Za-z]+)*$/;
+const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
 const ContactPage = () => {
   const [success, setSuccess] = useState(false);
+  const [errors, setErrors] = useState({ name: "", email: "" });
 
-  const handleSubmit = async (e) => {
+  const validateName = (value: string) => {
+    if (!value) return "Name is required.";
+    if (value.length > 30) return "Name must be 30 characters or fewer.";
+    if (!NAME_REGEX.test(value)) {
+      return "Name can contain letters only with single spaces between words.";
+    }
+    return "";
+  };
+
+  const validateEmail = (value: string) => {
+    if (!value) return "Email is required.";
+    if (value.includes(" ")) return "Email cannot contain spaces.";
+    if (!EMAIL_REGEX.test(value)) return "Enter a valid email address.";
+    return "";
+  };
+
+  const handleNameChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const sanitizedValue = e.target.value
+      .replace(/[^A-Za-z\s]/g, "")
+      .replace(/\s{2,}/g, " ")
+      .replace(/^\s+/g, "")
+      .slice(0, 30);
+
+    e.target.value = sanitizedValue;
+    setErrors((prev) => ({ ...prev, name: validateName(sanitizedValue) }));
+  };
+
+  const handleEmailChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const sanitizedValue = e.target.value.replace(/\s/g, "");
+    e.target.value = sanitizedValue;
+    setErrors((prev) => ({ ...prev, email: validateEmail(sanitizedValue) }));
+  };
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    const name = String(formData.get("name") ?? "").trim();
+    const email = String(formData.get("email") ?? "").trim();
+    const nameError = validateName(name);
+    const emailError = validateEmail(email);
 
-    const formData = new FormData(e.target);
+    if (nameError || emailError) {
+      setErrors({ name: nameError, email: emailError });
+      return;
+    }
+
+    setErrors({ name: "", email: "" });
+    formData.set("name", name);
+    formData.set("email", email);
 
     const response = await fetch("https://formspree.io/f/mnjgvklw", {
       method: "POST",
@@ -22,7 +72,8 @@ const ContactPage = () => {
 
     if (response.ok) {
       setSuccess(true);
-      e.target.reset();
+      form.reset();
+      setErrors({ name: "", email: "" });
 
       setTimeout(() => {
         setSuccess(false);
@@ -98,7 +149,7 @@ const ContactPage = () => {
               </a>
 
               <a
-                href="tel:+918124123000"
+                href="tel:+9104446254744"
                 className="flex items-start gap-4 rounded-2xl transition-colors hover:text-yellow-400"
               >
                 <div className="h-12 w-12 rounded-2xl bg-blue-900/30 border border-yellow-400/20 flex items-center justify-center">
@@ -142,21 +193,34 @@ const ContactPage = () => {
               onSubmit={handleSubmit}
               className="grid md:grid-cols-2 gap-6"
             >
-              <input
-                type="text"
-                name="name"
-                placeholder="Full Name"
-                required
-                className="bg-black/60 border border-gray-700 rounded-lg px-4 py-3 text-white placeholder:text-gray-500 focus:outline-none focus:border-yellow-400"
-              />
+              <div>
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Full Name"
+                  required
+                  maxLength={30}
+                  onChange={handleNameChange}
+                  className="w-full bg-black/60 border border-gray-700 rounded-lg px-4 py-3 text-white placeholder:text-gray-500 focus:outline-none focus:border-yellow-400"
+                />
+                {errors.name && (
+                  <p className="mt-2 text-sm text-red-400">{errors.name}</p>
+                )}
+              </div>
 
-              <input
-                type="email"
-                name="email"
-                placeholder="Email Address"
-                required
-                className="bg-black/60 border border-gray-700 rounded-lg px-4 py-3 text-white placeholder:text-gray-500 focus:outline-none focus:border-yellow-400"
-              />
+              <div>
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Email Address"
+                  required
+                  onChange={handleEmailChange}
+                  className="w-full bg-black/60 border border-gray-700 rounded-lg px-4 py-3 text-white placeholder:text-gray-500 focus:outline-none focus:border-yellow-400"
+                />
+                {errors.email && (
+                  <p className="mt-2 text-sm text-red-400">{errors.email}</p>
+                )}
+              </div>
 
               <input
                 type="text"
