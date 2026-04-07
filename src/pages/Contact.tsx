@@ -77,7 +77,10 @@ const ContactPage = () => {
                 </div>
                 <div className="text-left">
                   <h3 className="text-lg font-semibold">Location</h3>
-                  <p className="text-gray-400">Chennai, Tamil Nadu, India</p>
+                  <p className="text-gray-400">No:12,Gandhi Salai,<br />
+                  Srinivasa Nagar, Kandhanchavadi,<br />
+                  Perungudi,Chennai,<br />
+                  Tamil Nadu-600096</p>
                 </div>
               </a>
 
@@ -89,8 +92,21 @@ const ContactPage = () => {
                   <Phone className="text-yellow-400" size={22} />
                 </div>
                 <div className="text-left">
-                  <h3 className="text-lg font-semibold">Contact</h3>
+                  <h3 className="text-lg font-semibold">Mobile</h3>
                   <p className="text-gray-400">+91 81241 23000</p>
+                </div>
+              </a>
+
+              <a
+                href="tel:+918124123000"
+                className="flex items-start gap-4 rounded-2xl transition-colors hover:text-yellow-400"
+              >
+                <div className="h-12 w-12 rounded-2xl bg-blue-900/30 border border-yellow-400/20 flex items-center justify-center">
+                  <Phone className="text-yellow-400" size={22} />
+                </div>
+                <div className="text-left">
+                  <h3 className="text-lg font-semibold">Telephone</h3>
+                  <p className="text-gray-400">+91-044-4625 4744 </p>
                 </div>
               </a>
 
