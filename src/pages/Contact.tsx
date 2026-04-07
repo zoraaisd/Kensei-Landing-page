@@ -77,7 +77,10 @@ const ContactPage = () => {
                 </div>
                 <div className="text-left">
                   <h3 className="text-lg font-semibold">Location</h3>
-                  <p className="text-gray-400">Chennai, Tamilnadu, India</p>
+                  <p className="text-gray-400">No:12,Gandhi Salai,<br />
+                  Srinivasa Nagar, Kandhanchavadi,<br />
+                  Perungudi,Chennai,<br />
+                  Tamil Nadu-600096</p>
                 </div>
               </a>
 
