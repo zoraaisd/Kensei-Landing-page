@@ -21,7 +21,7 @@ const BrandsSection = () => {
       href: "https://147-snooker.netlify.app/",
     },
     {
-      name: "Dip&Dash",
+      name: "Dip & Dash",
       alt: "Dip & Dash",
       image: dipLogo,
       href: "https://www.dipanddash.com/",
@@ -76,7 +76,7 @@ const BrandsSection = () => {
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.2, duration: 0.6 }}
         >
-          A diverse portfolio of premium brands united by our commitment to excellence and innovation
+          A diverse portfolio of premium brands united by our commitment to excellence and innovation.
         </motion.p>
 
         <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">

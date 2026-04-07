@@ -38,7 +38,16 @@ const Navbar = () => {
   const navbarRef = useRef<HTMLElement | null>(null);
 
   const isExternalHref = (href: string) => href.startsWith("http");
-  const isSectionHref = (href: string) => href.startsWith("#");
+
+  const scrollToSectionWithOffset = (section: Element) => {
+    const navbarHeight = navbarRef.current?.offsetHeight ?? 72;
+    const top = section.getBoundingClientRect().top + window.scrollY - navbarHeight - 16;
+
+    window.scrollTo({
+      top: Math.max(0, top),
+      behavior: "smooth",
+    });
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -143,7 +152,7 @@ const Navbar = () => {
       setTimeout(() => {
         const section = document.querySelector(href);
         if (section) {
-          section.scrollIntoView({ behavior: "smooth" });
+          scrollToSectionWithOffset(section);
         }
       }, 300);
       return;
@@ -156,10 +165,10 @@ const Navbar = () => {
     if (mobileOpen) {
       setMobileOpen(false);
       setTimeout(() => {
-        section.scrollIntoView({ behavior: "smooth" });
+        scrollToSectionWithOffset(section);
       }, 420);
     } else {
-      section.scrollIntoView({ behavior: "smooth" });
+      scrollToSectionWithOffset(section);
     }
   };
 
@@ -171,10 +180,10 @@ const Navbar = () => {
       transition={{ duration: 0.6 }}
       className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md border-b border-blue-800"
     >
-      <div className="container mx-auto flex items-center justify-between px-4 py-2 min-h-[60px]">
+      <div className="container mx-auto flex items-center justify-between gap-4 px-4 py-2 min-h-[60px]">
 
         {/* LOGO */}
-        <button onClick={() => handleScrollTo("#home")}>
+        <button onClick={() => handleScrollTo("#home")} className="shrink-0">
           <img
             src={kenseiLogo}
             alt="Kensei"
@@ -183,15 +192,15 @@ const Navbar = () => {
         </button>
 
         {/* DESKTOP NAV */}
-        <div className="hidden md:flex items-center gap-6">
+        <div className="hidden lg:flex flex-1 items-center justify-end gap-3 xl:gap-6 min-w-0">
 
-          <ul className="flex items-center gap-6">
+          <ul className="flex items-center justify-end gap-1 xl:gap-3 min-w-0">
             {navLinks.map((link) => (
               <li key={link.label}>
                 <button
                   onClick={() => handleScrollTo(link.href)}
                   className={`
-          relative text-sm font-semibold tracking-wide px-4 py-2 rounded-md
+          relative whitespace-nowrap text-xs xl:text-sm font-semibold tracking-wide px-2.5 xl:px-4 py-2 rounded-md
           transition-all duration-300
 
           ${active === link.href
@@ -212,7 +221,7 @@ const Navbar = () => {
                   setCompaniesOpen((prev) => !prev);
                 }}
                 className={`
-          relative text-sm font-semibold tracking-wide px-4 py-2 rounded-md
+          relative whitespace-nowrap text-xs xl:text-sm font-semibold tracking-wide px-2.5 xl:px-4 py-2 rounded-md
           transition-all duration-300
           ${companyLinks.some((link) => active === link.href)
                     ? "bg-gradient-to-r from-yellow-400 to-yellow-600 text-white shadow-md"
@@ -259,12 +268,12 @@ const Navbar = () => {
             </li>
           </ul>
 
-          <li>
+          <li className="shrink-0">
             <a
               href="https://147-snooker.netlify.app/booking"
               target="_blank"
               rel="noopener noreferrer"
-              className="relative text-sm font-semibold tracking-wide px-4 py-2 rounded-md
+              className="relative whitespace-nowrap text-xs xl:text-sm font-semibold tracking-wide px-3 xl:px-4 py-2 rounded-md
                          transition-all duration-300
                          bg-blue-900 text-white hover:bg-blue-800 hover:drop-shadow-[0_0_8px_rgba(255,215,0,0.4)]"
             >
@@ -277,7 +286,7 @@ const Navbar = () => {
         {/* MOBILE TOGGLE */}
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          className="md:hidden text-blue-900"
+          className="lg:hidden text-blue-900"
         >
           {mobileOpen ? <X size={22} /> : <Menu size={22} />}
         </button>
@@ -291,7 +300,7 @@ const Navbar = () => {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.4 }}
-            className="md:hidden bg-white border-t border-gray-200"
+            className="lg:hidden bg-white border-t border-gray-200"
           >
             <ul className="flex flex-col items-stretch gap-2 py-4">
               {navLinks.map((link) => (
@@ -318,7 +327,7 @@ const Navbar = () => {
                   Companies
                   <span className="text-blue-600">{companiesOpen ? "-" : "+"}</span>
                 </button>
-                <AnimatePresence>
+                <AnimatePresence> 
                   {companiesOpen && (
                     <motion.ul
                       initial={{ height: 0 }}
@@ -350,14 +359,16 @@ const Navbar = () => {
               </li>
 
               <li key="book-slot-mobile">
-                <a
-                  href="https://147-snooker.netlify.app/booking"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block px-6 py-2 ml-6 text-sm font-semibold tracking-wide bg-blue-900 text-white hover:bg-blue-800 rounded-md transition-all duration-300"
-                >
-                  Book a Slot
-                </a>
+                <div className="px-6 pt-2">
+                  <a
+                    href="https://147-snooker.netlify.app/booking"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block w-full rounded-md bg-blue-900 px-6 py-3 text-center text-sm font-semibold tracking-wide text-white transition-all duration-300 hover:bg-blue-800"
+                  >
+                    Book a Slot
+                  </a>
+                </div>
               </li>
             </ul>
           </motion.div>

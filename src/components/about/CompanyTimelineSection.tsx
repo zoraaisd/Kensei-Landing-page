@@ -17,25 +17,25 @@ const CompanyTimelineSection = () => {
     {
       year: 2020,
       title: "Expanded into Online Gaming",
-      description: "Expanded into online gaming with Game Of War platform",
+      description: "Expanded into online gaming with the Game Of War platform.",
       align: "left"
     },
     {
       year: 2021,
-      title: "Introduced Dip&Dash",
-      description: "Introduced Dip&Dash, revolutionizing the dining experience",
+      title: "Introduced Dip & Dash",
+      description: "Introduced Dip & Dash, revolutionizing the dining experience.",
       align: "right"
     },
     {
       year: 2022,
       title: "Launched Optimus Global",
-      description: "Launched Optimus Global for premium overseas education services",
+      description: "Launched Optimus Global to deliver premium overseas education services.",
       align: "left"
     },
     {
       year: 2024,
       title: "Expanded Ecosystem",
-      description: "Expanded with Optimus Manpower and Zora, solidifying our multi-venture ecosystem",
+      description: "Expanded with Optimus Manpower and Zora, solidifying our multi-venture ecosystem.",
       align: "right"
     }
   ];

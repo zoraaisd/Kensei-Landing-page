@@ -18,14 +18,14 @@ const LeadershipSection = () => {
 
   return (
     <section className="py-28 container mx-auto px-6 max-w-6xl">
-      <h2 className="text-4xl font-bold text-center mb-20 text-yellow-400">
+      <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 sm:mb-20 text-yellow-400">
         Meet Our Leadership
       </h2>
 
-      <div className="grid md:grid-cols-2 gap-16">
+      <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16">
         {/* Founder */}
         <motion.div 
-          className="bg-blue-900/20 p-10 rounded-3xl border border-yellow-400/20 text-center hover:shadow-[0_0_40px_rgba(255,215,0,0.25)] transition-all duration-300"
+          className="bg-blue-900/20 p-6 sm:p-8 lg:p-10 rounded-3xl border border-yellow-400/20 text-center hover:shadow-[0_0_40px_rgba(255,215,0,0.25)] transition-all duration-300"
           whileHover={{ y: -5 }}
           initial={{ opacity: 0, x: -30 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -75,7 +75,7 @@ const LeadershipSection = () => {
 
         {/* Co-Founder */}
         <motion.div 
-          className="bg-blue-900/20 p-10 rounded-3xl border border-yellow-400/20 text-center hover:shadow-[0_0_40px_rgba(255,215,0,0.25)] transition-all duration-300"
+          className="bg-blue-900/20 p-6 sm:p-8 lg:p-10 rounded-3xl border border-yellow-400/20 text-center hover:shadow-[0_0_40px_rgba(255,215,0,0.25)] transition-all duration-300"
           whileHover={{ y: -5 }}
           initial={{ opacity: 0, x: 30 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -99,7 +99,7 @@ const LeadershipSection = () => {
           </p>
 
           <p className="text-gray-400 leading-relaxed mb-6">
-            As the visionary driving expansion and innovation, our Co-Founder brings a forward-thinking approach to every challenge. Their expertise in brand development and market positioning has expanded Kensei's global reach. They champion technological advancement and are committed to establishing Kensei as an industry benchmark.
+            As the visionary driving expansion and innovation, our Co-Founder brings a forward-thinking approach to every challenge. Their expertise in brand development and market positioning has helped expand Kensei's global reach. They champion technological advancement and are committed to establishing Kensei as an industry benchmark.
           </p>
 
           <div className="flex justify-center gap-8 mt-6">

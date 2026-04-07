@@ -11,10 +11,10 @@ const MissionVisionSection = () => {
       {/* MISSION SECTION - Full Page */}
       <section className="min-h-screen py-20 bg-black flex items-center">
         <div className="container mx-auto px-6 max-w-7xl">
-          <div className="grid md:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
             {/* Left - Image */}
             <motion.div
-              className="group relative h-96 md:h-full rounded-2xl overflow-hidden shadow-2xl"
+              className="group relative h-80 sm:h-96 lg:h-full rounded-2xl overflow-hidden shadow-2xl"
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
@@ -49,14 +49,14 @@ const MissionVisionSection = () => {
                 <div className="w-12 h-12 rounded-full bg-yellow-400/20 flex items-center justify-center">
                   <Target className="w-6 h-6 text-yellow-400" />
                 </div>
-                <h2 className="text-5xl font-bold text-yellow-400">
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-yellow-400">
                   Our Mission
                 </h2>
               </div>
 
               <div className="space-y-6">
-                <p className="text-xl text-gray-300 leading-relaxed font-semibold">
-                  To deliver transformative experiences across entertainment, dining and education- empowering individuals to pursue excellence and unlock their true potential.
+                <p className="text-lg sm:text-xl text-gray-300 leading-relaxed font-semibold">
+                  To deliver transformative experiences across entertainment, dining and education, empowering individuals to pursue excellence and unlock their true potential.
                 </p>
 
                 <div className="space-y-4">
@@ -90,27 +90,27 @@ const MissionVisionSection = () => {
       {/* VISION SECTION - Full Page */}
       <section className="min-h-screen py-20 bg-gradient-to-b from-black to-blue-950 flex items-center">
         <div className="container mx-auto px-6 max-w-7xl">
-          <div className="grid md:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
             {/* Left - Content */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="space-y-8 order-2 md:order-1"
+              className="space-y-8 order-2 lg:order-1"
             >
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 rounded-full bg-yellow-400/20 flex items-center justify-center">
                   <Lightbulb className="w-6 h-6 text-yellow-400" />
                 </div>
-                <h2 className="text-5xl font-bold text-yellow-400">
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-yellow-400">
                   Our Vision
                 </h2>
               </div>
 
               <div className="space-y-6">
-                <p className="text-xl text-gray-300 leading-relaxed font-semibold">
-                  To become a globally recognized lifestyle group celebrated for innovation, excellence and transformative multi-industry impact worldwide.
+                <p className="text-lg sm:text-xl text-gray-300 leading-relaxed font-semibold">
+                  To become a globally recognized lifestyle group celebrated for innovation, excellence and transformative multi-industry impact.
                 </p>
 
                 <div className="space-y-4">
@@ -140,7 +140,7 @@ const MissionVisionSection = () => {
 
             {/* Right - Image */}
             <motion.div
-              className="group relative h-96 md:h-full rounded-2xl overflow-hidden shadow-2xl order-1 md:order-2"
+              className="group relative h-80 sm:h-96 lg:h-full rounded-2xl overflow-hidden shadow-2xl order-1 lg:order-2"
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}

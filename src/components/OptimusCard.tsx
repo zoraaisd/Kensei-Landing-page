@@ -22,15 +22,16 @@ const OptimusCard = () => {
   return (
     <section
       id="optimus"
-      className="relative w-full py-24 min-h-screen flex items-center overflow-hidden bg-black"
+      className="relative scroll-mt-24 w-full overflow-hidden bg-black py-16 sm:py-20 md:py-12 lg:py-10 xl:min-h-[100svh] xl:py-0"
     >
       {/* Top Left Small Brand Label */}
-      <div className="absolute top-6 left-6 z-20">
-        <div className="px-6 py-2 rounded-full
-                bg-blue-900/40 backdrop-blur-md
-                border border-blue-400/40
-                shadow-[0_0_20px_rgba(59,130,246,0.35)]">
-          <span className="text-blue-300 text-sm tracking-widest font-semibold">
+      <div className="absolute left-4 top-4 z-20 sm:left-6 sm:top-6">
+        <div
+          className="rounded-full border border-blue-400/40 bg-blue-900/40 px-6 py-2
+                backdrop-blur-md
+                shadow-[0_0_20px_rgba(59,130,246,0.35)]"
+        >
+          <span className="text-xs font-semibold tracking-[0.2em] text-blue-300 sm:text-sm sm:tracking-widest">
             Optimus Overseas
           </span>
         </div>
@@ -55,77 +56,72 @@ const OptimusCard = () => {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,rgba(234,179,8,0.18),transparent_60%)]" />
 
       {/* ===== Content ===== */}
-      <div className="relative z-10 w-full">
-        <div className="px-8 lg:px-16 max-w-7xl">
+      <div className="relative z-10 flex h-full items-center">
+        <div className="container mx-auto px-5 sm:px-6 md:px-12">
           <motion.div
             initial={{ opacity: 0, y: 60 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
             viewport={{ once: true }}
-            className="max-w-2xl text-left"
+            className="mx-auto flex w-full max-w-3xl flex-col items-center pt-10 text-center sm:pt-12 lg:max-w-4xl lg:pt-14 xl:pt-4"
           >
+            <p className="mb-6 text-[10px] font-semibold uppercase tracking-[0.2em] text-yellow-400 sm:text-xs sm:tracking-widest md:text-sm">
+              Global Education Pathways
+            </p>
 
-          {/* Small Tagline */}
-          <p className="text-yellow-400 uppercase tracking-widest text-sm mb-4">
-            Global Education Pathways
-          </p>
+            <h1
+              className="mb-6 text-center text-3xl font-extrabold leading-[1.02] text-white sm:text-4xl md:text-5xl lg:text-[4.1rem] xl:text-7xl"
+            >
+              <span className="text-white">Study Beyond</span>
+              <br />
+              <span className="bg-gradient-to-r from-blue-300 via-yellow-400 to-blue-400 bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(59,130,246,0.6)]">
+                Boundaries.
+              </span>
+            </h1>
 
-          {/* Main Heading */}
-          <h1 className="text-5xl md:text-7xl font-extrabold leading-tight mb-6 text-white" style={{ fontFamily: "Playfair Display, serif" }}>
-            Study Beyond
-            <span className="block bg-gradient-to-r from-blue-300 via-yellow-400 to-blue-400 bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(59,130,246,0.6)]">
-              Boundaries.
-            </span>
-          </h1>
+            <p className="mb-4 text-center text-base italic text-blue-200 md:text-lg">
+              "Your global academic journey starts here."
+            </p>
 
-          {/* Quote */}
-          <p className="italic text-white/90 mb-6">
-            “Your global academic journey starts here.”
-          </p>
+            <p className="mb-10 max-w-2xl text-center text-[0.95rem] leading-relaxed text-white/90 sm:text-base md:text-lg">
+              Optimus Overseas empowers students to unlock international
+              education opportunities with confidence and clarity. From
+              personalized counseling to university admissions, visa support,
+              and beyond, we guide you every step toward academic excellence
+              and global success.
+            </p>
 
-          {/* Paragraph */}
-          <p className="text-white/90 text-lg leading-relaxed mb-8">
-            Optimus Overseas empowers students to unlock international
-            education opportunities with confidence and clarity.
-            From personalized counseling to university admissions
-            and visa support, we guide you every step toward
-            academic excellence and global success.
-          </p>
-
-          {/* Buttons */}
-          <div className="flex flex-wrap gap-4">
-
-            <motion.a
-              href="https://www.optimusoverseasedu.com/universities"
-              target="_blank"
-              rel="noopener noreferrer"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="px-8 py-4 rounded-full font-semibold
+            <div className="flex w-full flex-col items-center justify-center gap-4 sm:flex-row">
+              <motion.a
+                href="https://www.optimusoverseasedu.com/universities"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="w-full sm:w-auto px-8 py-4 rounded-xl text-center font-semibold
                          bg-blue-600 hover:bg-blue-500
                          text-white
                          shadow-[0_0_30px_rgba(59,130,246,0.6)]
                          transition"
-            >
-              Explore Universities →
-            </motion.a>
+              >
+                Explore Universities
+              </motion.a>
 
-            <motion.a
-              href="https://www.optimusoverseasedu.com/contact"
-              target="_blank"
-              rel="noopener noreferrer"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="px-8 py-4 rounded-full font-semibold
+              <motion.a
+                href="https://www.optimusoverseasedu.com/contact"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="w-full sm:w-auto px-8 py-4 rounded-xl text-center font-semibold
                          border border-yellow-400 text-yellow-400
                          hover:bg-yellow-400 hover:text-black
                          transition"
-            >
-              Free Consultation
-            </motion.a>
-
-          </div>
-        </motion.div>
+              >
+                Free Consultation
+              </motion.a>
+            </div>
+          </motion.div>
         </div>
       </div>
 
@@ -134,10 +130,11 @@ const OptimusCard = () => {
         {slides.map((_, i) => (
           <div
             key={i}
-            className={`h-2 rounded-full transition-all duration-500 ${i === index
+            className={`h-2 rounded-full transition-all duration-500 ${
+              i === index
                 ? "w-8 bg-yellow-400 shadow-[0_0_15px_rgba(234,179,8,0.9)]"
                 : "w-2 bg-gray-500"
-              }`}
+            }`}
           />
         ))}
       </div>
@@ -152,7 +149,6 @@ const OptimusCard = () => {
           className="h-full bg-yellow-400"
         />
       </div>
-
     </section>
   );
 };

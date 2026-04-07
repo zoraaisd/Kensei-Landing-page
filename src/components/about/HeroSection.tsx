@@ -39,7 +39,7 @@ const HeroSection = () => {
           <Target className="w-8 h-8 text-yellow-400 mx-auto mb-3" />
           <h3 className="text-yellow-400 font-bold mb-2">Our Focus</h3>
           <p className="text-gray-400 text-sm">
-            Creating premium experiences through strategic ventures in entertainment, dining and education
+            Creating premium experiences through strategic ventures in entertainment, dining and education.
           </p>
         </motion.div>
 
@@ -52,7 +52,7 @@ const HeroSection = () => {
           <Award className="w-8 h-8 text-yellow-400 mx-auto mb-3" />
           <h3 className="text-yellow-400 font-bold mb-2">Our Expertise</h3>
           <p className="text-gray-400 text-sm">
-            Multi-industry excellence combining operational mastery with innovative brand development
+            Multi-industry excellence, combining operational mastery with innovative brand development.
           </p>
         </motion.div>
 
@@ -65,7 +65,7 @@ const HeroSection = () => {
           <Users className="w-8 h-8 text-yellow-400 mx-auto mb-3" />
           <h3 className="text-yellow-400 font-bold mb-2">Our Community</h3>
           <p className="text-gray-400 text-sm">
-            Building a thriving ecosystem of premium lifestyle brands serving discerning audiences
+            Building a thriving ecosystem of premium lifestyle brands for discerning audiences.
           </p>
         </motion.div>
       </div>

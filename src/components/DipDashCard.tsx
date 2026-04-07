@@ -25,7 +25,7 @@ const DipDashCard = () => {
     <section
       id="dipdash"
       ref={sectionRef}
-      className="relative min-h-screen overflow-hidden bg-[#050505] text-white"
+      className="relative scroll-mt-24 w-full overflow-hidden bg-[#050505] py-16 text-white sm:py-20 md:py-12 lg:py-10 xl:min-h-[100svh] xl:py-0"
     >
       {/* Background Video */}
       <video
@@ -68,41 +68,84 @@ const DipDashCard = () => {
         transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
       />
 
-      {/* Content */}
-      <div className="relative z-10 flex min-h-screen flex-col items-start justify-center px-8 pt-10 pb-16 md:px-16">
-
-        {/* Badge */}
-        <div className="mb-5 flex items-center gap-3 rounded-full border border-[#f59e0b]/25 bg-white/5 px-4 py-2 backdrop-blur-xl">
-          <span className="h-2 w-2 rounded-full bg-[#ff8c00] shadow-[0_0_16px_rgba(255,140,0,0.95)]" />
-          <span className="text-[11px] uppercase tracking-[0.42em] text-white/70">Dip & Dash</span>
-        </div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          className="flex w-full max-w-4xl flex-col justify-center"
+      {/* Top Left Small Brand Label */}
+      <div className="absolute left-4 top-4 z-20 sm:left-6 sm:top-6">
+        <div
+          className="rounded-full border border-[#ff8c00]/40 bg-[#7c2d12]/40 px-6 py-2
+                     shadow-[0_0_20px_rgba(255,140,0,0.3)] backdrop-blur-md"
         >
-          <h2
-            className="text-6xl font-bold leading-tight md:text-7xl xl:text-8xl"
-          >
-            <span className="block text-white">Crafted to</span>
-            <span className="block bg-gradient-to-r from-[#ff5a1f] via-[#ff8c00] to-[#facc15] bg-clip-text text-transparent">
-              Perfection.
-            </span>
-          </h2>
-          <p className="mt-8 max-w-2xl text-lg font-normal leading-9 text-white/80 md:text-xl">
-            A signature stack crafted like a hero shot, where each ingredient lands in precision, bathed in a warm glow, building layer by layer into a bold, appetite-first spectacle to captivate and crave.
-          </p>
-          <div className="mt-10 flex flex-wrap gap-4">
+          <span className="text-xs font-semibold tracking-[0.2em] text-[#facc15] sm:text-sm sm:tracking-widest">
+            Dip &amp; Dash
+          </span>
+        </div>
+      </div>
+
+      {/* Content */}
+      <div className="relative z-10 flex h-full items-center">
+        <div className="container mx-auto px-5 sm:px-6 md:px-12">
+          <div className="mx-auto flex w-full max-w-3xl flex-col items-center pt-10 text-center sm:pt-12 lg:max-w-4xl lg:pt-14 xl:pt-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="mb-6"
+            >
+              <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#ffb347] sm:text-xs sm:tracking-widest md:text-sm">
+                Signature Flavour | Layered Indulgence | Bold Cravings
+              </span>
+            </motion.div>
+
+            <motion.h2
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              className="mb-6 text-center text-3xl font-extrabold leading-[1.02] sm:text-4xl md:text-5xl lg:text-[4.1rem] xl:text-7xl"
+            >
+              <span className="text-white">Crafted to</span>
+              <br />
+              <span className="bg-gradient-to-r from-[#ff5a1f] via-[#ff8c00] to-[#facc15] bg-clip-text text-transparent">
+                Perfection.
+              </span>
+            </motion.h2>
+
+            <motion.p
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="mb-4 text-center text-base italic text-[#ffd089] md:text-lg"
+            >
+              "Every layer lands with flavour-first precision."
+            </motion.p>
+
+            <motion.p
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.35 }}
+              className="mb-10 max-w-2xl text-center text-[0.95rem] leading-relaxed text-white/80 sm:text-base md:text-lg"
+            >
+              A signature stack crafted like a hero shot, where each ingredient
+              lands with precision and builds layer by layer into a bold,
+              appetite-first spectacle.
+            </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.5 }}
+              className="flex w-full flex-col items-center justify-center gap-4 sm:flex-row"
+            >
             <motion.a
               href="https://www.dipanddash.com/get-app"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="rounded-xl bg-gradient-to-r from-[#ff5a1f] to-[#ff8c00] px-8 py-4 font-semibold text-white shadow-[0_0_30px_rgba(255,90,31,0.5)] transition-shadow hover:shadow-[0_0_45px_rgba(255,90,31,0.75)]"
+              className="w-full sm:w-auto rounded-xl bg-gradient-to-r from-[#ff5a1f] to-[#ff8c00] px-8 py-4 text-center font-semibold text-white shadow-[0_0_30px_rgba(255,90,31,0.5)] transition-shadow hover:shadow-[0_0_45px_rgba(255,90,31,0.75)]"
             >
               Order Now
             </motion.a>
@@ -112,12 +155,13 @@ const DipDashCard = () => {
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="rounded-xl border border-[#ff8c00]/50 px-8 py-4 font-semibold text-[#ff8c00] backdrop-blur-sm transition-colors hover:bg-[#ff8c00]/10"
+              className="w-full sm:w-auto rounded-xl border border-[#ff8c00]/50 px-8 py-4 text-center font-semibold text-[#ff8c00] backdrop-blur-sm transition-colors hover:bg-[#ff8c00]/10"
             >
               View Menu
             </motion.a>
+            </motion.div>
           </div>
-        </motion.div>
+        </div>
       </div>
 
       <div className="pointer-events-none absolute inset-x-0 bottom-0 z-20 h-32 bg-gradient-to-t from-[#050505] via-[#050505]/70 to-transparent" />

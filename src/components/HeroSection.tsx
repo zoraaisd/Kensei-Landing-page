@@ -83,7 +83,7 @@ const slides: HeroSlide[] = [
     title: "Beyond Borders.",
     subtitle: "Optimus Overseas",
     description:
-      "Empowering global careers through world-class postgraduate programs and guidance.",
+      "Empowering global careers through world-class postgraduate programs and expert guidance.",
     headingGradient:
       "from-blue-400 via-indigo-400 to-sky-400",
     paragraphColor: "text-blue-100/90",
@@ -98,7 +98,7 @@ const slides: HeroSlide[] = [
     title: "Empower Your Workforce.",
     subtitle: "Optimus Manpower",
     description:
-      "Connecting businesses with skilled professionals for sustainable growth and excellence.",
+      "Connecting businesses with skilled professionals to drive sustainable growth and excellence.",
     headingGradient:
       "from-slate-300 via-gray-400 to-slate-300",
     paragraphColor: "text-slate-200/90",
@@ -165,7 +165,14 @@ const HeroSection = () => {
   const handleScrollTo = (target: string) => {
     const section = document.querySelector(target);
     if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
+      const navbar = document.querySelector("nav");
+      const navbarHeight = navbar instanceof HTMLElement ? navbar.offsetHeight : 72;
+      const top = section.getBoundingClientRect().top + window.scrollY - navbarHeight - 16;
+
+      window.scrollTo({
+        top: Math.max(0, top),
+        behavior: "smooth",
+      });
     }
   };
 
@@ -182,7 +189,7 @@ const HeroSection = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black"
+      className="relative min-h-[100svh] flex items-center justify-center overflow-hidden bg-black"
       onMouseMove={handleMouseMove}
     >
       <style>{`
@@ -227,8 +234,8 @@ const HeroSection = () => {
 
       {/* CONTENT WRAPPER */}
       <div className="relative z-10 w-full h-full flex items-center">
-        <div className="container mx-auto px-4 sm:px-6 md:px-10 xl:px-12 py-20 sm:py-24 lg:py-16">
-          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.05fr)_minmax(260px,0.95fr)] gap-10 sm:gap-12 lg:gap-14 items-center">
+        <div className="container mx-auto px-4 sm:px-6 md:px-10 xl:px-12 py-16 sm:py-24 lg:py-20 xl:py-16">
+          <div className="grid grid-cols-1 xl:grid-cols-[minmax(0,1.05fr)_minmax(260px,0.95fr)] gap-10 sm:gap-12 lg:gap-14 xl:gap-16 items-center">
 
             {/* LEFT SIDE - ANIMATED CONTENT */}
             <AnimatePresence mode="wait">
@@ -238,20 +245,20 @@ const HeroSection = () => {
                 animate={{ opacity: 1, x: 0, y: 0 }}
                 exit={{ opacity: 0, x: -30, transition: { duration: 0.2 } }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
-                className="space-y-5 sm:space-y-6 text-center lg:text-left max-w-xl sm:max-w-2xl lg:max-w-none mx-auto lg:mx-0"
+                className="order-2 space-y-4 sm:space-y-6 text-center xl:order-1 xl:text-left max-w-xl sm:max-w-2xl lg:max-w-3xl xl:max-w-none mx-auto xl:mx-0"
               >
                 {/* Subtitle - Capsule Badge */}
                 <motion.div
                   initial={{ opacity: 0, x: -40 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.2, duration: 0.6 }}
-                  className="inline-block mx-auto lg:mx-0 px-4 sm:px-5 py-2 rounded-full backdrop-blur-sm border"
+                  className="inline-block mx-auto xl:mx-0 px-3 sm:px-5 py-2 rounded-full backdrop-blur-sm border"
                   style={{
                     borderColor: slides[index].accentColor.replace("0.3", "1"),
                     backgroundColor: slides[index].accentColor.replace("0.3", "0.2"),
                   }}
                 >
-                  <p className="uppercase tracking-[0.24em] sm:tracking-[0.3em] text-[10px] sm:text-xs md:text-sm font-semibold" 
+                  <p className="uppercase tracking-[0.18em] sm:tracking-[0.3em] text-[9px] sm:text-xs md:text-sm font-semibold" 
                     style={{
                       color: slides[index].paragraphColor.includes("emerald") ? "#34d399" : slides[index].paragraphColor.includes("rose") ? "#fb7185" : slides[index].paragraphColor.includes("orange") ? "#fed7aa" : slides[index].paragraphColor.includes("blue") ? "#60a5fa" : "#cbd5e1",
                     }}
@@ -288,7 +295,7 @@ const HeroSection = () => {
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.3, duration: 0.8 }}
-                  className="text-[2.35rem] leading-[1.05] sm:text-5xl md:text-6xl xl:text-7xl font-bold drop-shadow-2xl"
+                  className="text-[2.05rem] leading-[1.02] sm:text-5xl md:text-6xl xl:text-7xl font-bold drop-shadow-2xl"
                   style={{
                     fontFamily: "Rockwell, serif",
                     perspective: "1000px",
@@ -322,7 +329,7 @@ const HeroSection = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.4, duration: 0.8 }}
-                  className={`text-base sm:text-lg md:text-xl leading-relaxed max-w-md sm:max-w-xl lg:max-w-2xl mx-auto lg:mx-0 ${slides[index].paragraphColor}`}
+                  className={`text-[0.95rem] sm:text-lg md:text-xl leading-relaxed max-w-md sm:max-w-xl lg:max-w-2xl mx-auto xl:mx-0 ${slides[index].paragraphColor}`}
                   style={{
                     transform: `translateY(${mousePosition.y * 0.5}px)`,
                   }}
@@ -341,7 +348,7 @@ const HeroSection = () => {
                     whileHover={{ scale: 1.05, y: -2 }}
                     whileTap={{ scale: 0.98 }}
                     onClick={() => handleScrollTo(slides[index].target)}
-                    className={`px-6 sm:px-8 py-3 rounded-xl font-semibold text-sm sm:text-base text-white
+                    className={`w-full sm:w-auto px-6 sm:px-8 py-3 rounded-xl font-semibold text-sm sm:text-base text-white
                       transition-all duration-300 shadow-lg
                       ${slides[index].buttonGradient}`}
                     style={{ fontFamily: "Rockwell, serif" }}
@@ -353,7 +360,7 @@ const HeroSection = () => {
             </AnimatePresence>
 
             {/* RIGHT SIDE - STACKED CARDS */}
-            <div className="flex justify-center items-center min-h-[18rem] h-[20rem] sm:h-[24rem] md:h-[27rem] lg:h-[29rem] xl:h-[32rem] relative w-full perspective-[1000px]">
+            <div className="order-1 flex justify-center items-center min-h-[15rem] h-[17rem] sm:h-[24rem] md:h-[27rem] lg:h-[30rem] xl:order-2 xl:h-[32rem] relative w-full perspective-[1000px]">
               <motion.div
                 key={`card-glow-${index}`}
                 className="absolute inset-x-[10%] inset-y-[14%] sm:inset-x-[8%] sm:inset-y-[12%] rounded-[2rem] blur-3xl"
@@ -364,7 +371,7 @@ const HeroSection = () => {
                   background: `radial-gradient(circle, ${slides[index].cardGlowColor ?? slides[index].accentColor.replace("0.3", "0.5")} 0%, transparent 72%)`,
                 }}
               />
-              <div className="w-[13.5rem] h-[18.5rem] min-[420px]:w-[14.5rem] min-[420px]:h-[20rem] sm:w-[16rem] sm:h-[22rem] md:w-[18rem] md:h-[24rem] lg:w-[20rem] lg:h-[26rem] xl:w-[23rem] xl:h-[29rem] z-20">
+              <div className="w-[11.5rem] h-[15.5rem] min-[390px]:w-[12.5rem] min-[390px]:h-[17rem] sm:w-[16rem] sm:h-[22rem] md:w-[18rem] md:h-[24rem] lg:w-[21rem] lg:h-[27rem] xl:w-[23rem] xl:h-[29rem] z-20">
                 <Stack 
                   cards={stackCards}
                   randomRotation={false}
@@ -382,7 +389,7 @@ const HeroSection = () => {
       </div>
 
       {/* SLIDE INDICATORS */}
-      <div className="absolute bottom-5 sm:bottom-8 left-1/2 -translate-x-1/2 flex gap-2 sm:gap-3 z-20">
+      <div className="absolute bottom-4 sm:bottom-8 left-1/2 -translate-x-1/2 flex gap-2 sm:gap-3 z-20">
         {slides.map((_, i) => (
           <motion.div
             key={i}

@@ -9,7 +9,7 @@ const WhyChooseUsSection = () => {
           Why Choose Kensei Groups
         </h2>
         <p className="text-center text-gray-400 mb-16 max-w-2xl mx-auto">
-          Discover what sets us apart in the premium lifestyle market
+          Discover what sets us apart in the premium lifestyle market.
         </p>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -20,7 +20,7 @@ const WhyChooseUsSection = () => {
             <Award className="w-10 h-10 text-yellow-400 mb-4" />
             <h3 className="text-lg font-bold text-white mb-3">Premium Quality</h3>
             <p className="text-gray-400 text-sm leading-relaxed">
-              Uncompromising standards across all ventures ensuring excellence in every experience
+              Uncompromising standards across all ventures, ensuring excellence in every experience.
             </p>
           </motion.div>
 
@@ -31,7 +31,7 @@ const WhyChooseUsSection = () => {
             <Users className="w-10 h-10 text-yellow-400 mb-4" />
             <h3 className="text-lg font-bold text-white mb-3">Expert Leadership</h3>
             <p className="text-gray-400 text-sm leading-relaxed">
-              Visionary founders with proven track records driving innovation and growth
+              Visionary founders with proven track records of driving innovation and growth.
             </p>
           </motion.div>
 
@@ -42,7 +42,7 @@ const WhyChooseUsSection = () => {
             <Target className="w-10 h-10 text-yellow-400 mb-4" />
             <h3 className="text-lg font-bold text-white mb-3">Diverse Portfolio</h3>
             <p className="text-gray-400 text-sm leading-relaxed">
-              Multi-industry presence spanning entertainment, dining, education and manpower
+              A multi-industry presence spanning entertainment, dining, education and manpower.
             </p>
           </motion.div>
 
@@ -53,7 +53,7 @@ const WhyChooseUsSection = () => {
             <TrendingUp className="w-10 h-10 text-yellow-400 mb-4" />
             <h3 className="text-lg font-bold text-white mb-3">Consistent Growth</h3>
             <p className="text-gray-400 text-sm leading-relaxed">
-              Proven expansion trajectory and sustainable business performance year over year
+              A proven expansion trajectory and sustainable business performance year over year.
             </p>
           </motion.div>
         </div>

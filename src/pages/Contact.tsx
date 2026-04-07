@@ -39,7 +39,7 @@ const ContactPage = () => {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,215,0,0.08),transparent_70%)]" />
 
         <motion.h1
-          className="relative text-5xl md:text-6xl font-extrabold mb-6"
+          className="relative text-4xl sm:text-5xl md:text-6xl font-extrabold mb-6"
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9 }}
@@ -55,8 +55,8 @@ const ContactPage = () => {
 
       {/* ================= CONTACT LAYOUT ================= */}
       <section className="pb-28 container mx-auto px-6 max-w-6xl">
-        <div className="grid lg:grid-cols-[1.1fr_1.4fr] gap-10 items-stretch">
-          <div className="bg-blue-900/10 border border-yellow-400/20 rounded-3xl p-10">
+        <div className="grid lg:grid-cols-[1.1fr_1.4fr] gap-8 lg:gap-10 items-stretch">
+          <div className="bg-blue-900/10 border border-yellow-400/20 rounded-3xl p-6 sm:p-8 lg:p-10">
             <h2 className="text-3xl font-bold text-yellow-400 mb-6">
               Get in Touch
             </h2>
@@ -77,7 +77,7 @@ const ContactPage = () => {
                 </div>
                 <div className="text-left">
                   <h3 className="text-lg font-semibold">Location</h3>
-                  <p className="text-gray-400">Chennai, Tamilnadu, India</p>
+                  <p className="text-gray-400">Chennai, Tamil Nadu, India</p>
                 </div>
               </a>
 
@@ -111,7 +111,7 @@ const ContactPage = () => {
             </div>
           </div>
 
-          <div className="bg-blue-900/20 p-10 rounded-3xl border border-yellow-400/20">
+          <div className="bg-blue-900/20 p-6 sm:p-8 lg:p-10 rounded-3xl border border-yellow-400/20">
             <h2 className="text-3xl font-bold mb-8 text-yellow-400">
               Send Us a Message
             </h2>
